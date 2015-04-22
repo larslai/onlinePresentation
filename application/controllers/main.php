@@ -435,6 +435,39 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),	
+				'25/02/2015'=>array(
+					'ajax_id'=>'20150225',
+					'introduction'=>'Rss assistance system',
+					'pic'=>'lg/rss_post_assistance.jpg',
+					'full_size_pic'=>'rss_post_assistance.png',
+					'description'=>array(
+						'title'=>'Rss assistance system',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),	
+				'01/04/2015'=>array(
+					'ajax_id'=>'20150401',
+					'introduction'=>'Supplier analysis system support',
+					'pic'=>'lg/supplier_analysis_system.jpg',
+					'full_size_pic'=>'supplier_analysis_system.jpg',
+					'description'=>array(
+						'title'=>'Supplier analysis system support',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),	
+				'10/04/2015'=>array(
+					'ajax_id'=>'20150410',
+					'introduction'=>'FB App analysis system',
+					'pic'=>'lg/FB_app_analysis_system.jpg',
+					'full_size_pic'=>'FB_app_analysis_system.jpg',
+					'description'=>array(
+						'title'=>'FB App analysis system',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),										
 				),
 			);
 		$file_download = array(
