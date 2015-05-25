@@ -180,6 +180,12 @@ class Main extends CI_Controller {
 					'short_name'=>'AS',
 					'level'=>'PROFICIENT',
 					),
+				'RESTful'=>array(
+					'pic'=>'restful.jpg',
+					'title'=>'RESTful',
+					'short_name'=>'RESTful',
+					'level'=>'EXPERT',
+					),
 				),
 			'tools'=>array(
 				'Bootstrap'=>array(
@@ -467,7 +473,18 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),										
+					),		
+				'05/20/2015'=>array(
+					'ajax_id'=>'20150520',
+					'introduction'=>'FB user behavior system',
+					'pic'=>'lg/FB_user_behavior_system.jpg',
+					'full_size_pic'=>'FB_user_behavior_system.jpg',
+					'description'=>array(
+						'title'=>'FB user behavior system',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),									
 				),
 			);
 		$file_download = array(

@@ -100,6 +100,10 @@ class Ajax extends CI_Controller {
 					$pic_name = 'FBSDK.png';
 					$short_name = 'FBSDK';
 					break;	
+				case 'restful':
+					$pic_name = 'restful.jpg';
+					$short_name = 'RESTFUL';
+					break;	
 				default:
 					# code...
 					break;
@@ -170,7 +174,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end and back end coding.";
 				break;	
 			case '20140101' :
-				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
+				$img_list = array('ci','php','restful','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "E-Commerce analysis system builde";
 				$description = "To develop electronic commerce analysis system in order to analysis big data of online multinational electronic commerce.</p>
@@ -191,7 +195,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end and back end coding.";
 				break;	
 			case '20140726' :
-				$img_list = array('ci','php','lamp','mysql','git','es');
+				$img_list = array('ci','php','restful','lamp','mysql','git','es');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "SER Hackathon API platform";
 				$description = "To develop SER system for business hackathon activity.</p>
@@ -265,7 +269,15 @@ class Ajax extends CI_Controller {
 				$description = "Cooperate with Common Wealth magazine company.</p>
 								Build the system to support them to analysis keyword and fanspage in every FB APPs effectively.</p>
 								In this project, I was responsibile for front end programming and back end API calling support.";
-				break;									
+				break;	
+			case '20150520' :
+				$img_list = array('ci','php','restful');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "FB user behavior system";
+				$description = "Cooperate with OpenLife company.</p>
+								Build the system to support them to analysis FB user behavior.</p>
+								In this project, I was responsibile for back end API calling support.";
+				break;													
 			default:
 				$show_responsibile = false;
 				$title_name = "Oops!";
