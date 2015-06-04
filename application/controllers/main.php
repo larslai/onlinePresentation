@@ -95,6 +95,7 @@ class Main extends CI_Controller {
 				'description'=>array(
 					'chinese'=>100,
 					'english'=>100,
+					'japanese'=>30,
 					),
 				),
 			);
