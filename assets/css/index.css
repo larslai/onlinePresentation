@@ -1,0 +1,33 @@
+.level-bar-area.lv-100{
+	width: 100%;
+}
+.level-bar-area.lv-85{
+	width: 85%;
+}
+.level-bar-area.lv-70{
+	width: 70%;
+
+}
+.level-bar-area.lv-40{
+	width: 40%;
+
+}
+@keyframes lineGrow {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+.level-bar{
+	border-style:hidden;
+	border-radius: 5px;
+	background: #fff;
+	font-size: 0.8em;
+	color: #222334;
+	animation-name: lineGrow;
+    animation-duration: 3s
+}
+.no-padding{
+	padding: 0px;
+}
+.img-thumbnail{
+	border:none;
+}
