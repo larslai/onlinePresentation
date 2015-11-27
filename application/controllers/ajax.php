@@ -28,6 +28,10 @@ class Ajax extends CI_Controller {
 		$dom = '';
 		foreach($img_list as $key=>$img){
 			switch ($img) {
+				case 'phalcon':
+					$pic_name = 'phalcon.png';
+					$short_name = 'PHALCON';
+					break;
 				case 'yii':
 					$pic_name = 'yii.png';
 					$short_name = 'YII';
@@ -91,19 +95,19 @@ class Ajax extends CI_Controller {
 				case 'es':
 					$pic_name = 'elastic_search.png';
 					$short_name = 'ELASTIC<br>SEARCH';
-					break;	
+					break;
 				case 'solr':
 					$pic_name = 'solr.png';
 					$short_name = 'SOLR';
-					break;		
+					break;
 				case 'FBSDK':
 					$pic_name = 'FBSDK.png';
 					$short_name = 'FBSDK';
-					break;	
+					break;
 				case 'restful':
 					$pic_name = 'restful.jpg';
 					$short_name = 'RESTFUL';
-					break;	
+					break;
 				default:
 					# code...
 					break;
@@ -126,7 +130,7 @@ class Ajax extends CI_Controller {
 		$id = isset($_GET['item']) ? trim($_GET['item']) : null;
 		$show_responsibile = true;
 		switch($id) {
-	
+
 			//1st from the left
 			case '20120830' :
 				$img_list = array('yii','php','html','css','js','jquery','lamp','mysql','git');
@@ -150,7 +154,7 @@ class Ajax extends CI_Controller {
 				$title_name = "Financial management system";
 				$description = "To develop management system for CPA advertising platform to monitor all activies in advertising platform, analysis active users and financial management.</p>
 								In this project, I worked in RD and I was responsibile for front end and back end coding.";
-				break;	
+				break;
 			case '20130602' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','axure','illustrator','photoshop');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -158,7 +162,7 @@ class Ajax extends CI_Controller {
 				$description = "To develop image website to introduce company's products.</p>
 								In this project, I was responsibile for front end and back end coding at first.<br>
 								After we created the RD team, I was responsibile for PM and team leader.";
-				break;		
+				break;
 			case '20130810' :
 				$img_list = array('ci','php','html','css','js','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -172,35 +176,35 @@ class Ajax extends CI_Controller {
 				$title_name = "SRM system support";
 				$description = "To develop social relationship management system in order to analysis big data of social platform.</p>
 								In this project, I was responsibile for front end and back end coding.";
-				break;	
+				break;
 			case '20140101' :
 				$img_list = array('ci','php','restful','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "E-Commerce analysis system builde";
 				$description = "To develop electronic commerce analysis system in order to analysis big data of online multinational electronic commerce.</p>
 								In this project, I was responsibile for front end and back end coding.";
-				break;	
+				break;
 			case '20140115' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Data analysis system builde";
 				$description = "To develop data analysis system in order to help customer compile and download the information of social platform.</p>
 								In this project, I was responsibile for front end and back end coding.";
-				break;		
+				break;
 			case '20140615' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','bootstrap');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Taipeicity social data system builde";
 				$description = "To develop social data system in order to remote the user behavior in the social platform.</p>
 								In this project, I was responsibile for front end and back end coding.";
-				break;	
+				break;
 			case '20140726' :
 				$img_list = array('ci','php','restful','lamp','mysql','git','es');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "SER Hackathon API platform";
 				$description = "To develop SER system for business hackathon activity.</p>
 								In this project, I was responsibile for back end API function coding.";
-				break;	
+				break;
 			case '20140803' :
 				$img_list = array('html','css','js','jquery','git');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -208,7 +212,7 @@ class Ajax extends CI_Controller {
 				$description = "Support Japan business to redesign front end of functional webpage.</p>
 								In this project, I was responsibile for front end supprot.</p>
 								You can visit this platform by <a href=\"https://toto.rakuten.co.jp/toto/\" target=\"_blank\">here</a>";
-				break;		
+				break;
 			case '20140830' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','rwd','bootstrap','es');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -216,28 +220,28 @@ class Ajax extends CI_Controller {
 				$description = "After finished hackathon activity, we reformed SER system to become the business API platform.</p>
 								In this project, I was responsibile for front end support and back end API function coding.</p>
 								You can visit this platform by <a href=\"http://api.ser.ideas.iii.org.tw/docs/\" target=\"_blank\">here</a>";
-				break;						
+				break;
 			case '20140904' :
 				$img_list = array('html','css','js','jquery','git','rwd');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Credit card website redesign";
 				$description = "Support Japan business to redesign front end of image webpage.</p>
 								In this project, I was responsibile for front end supprot.";
-				break;						
+				break;
 			case '20141213' :
 				$img_list = array('ci','php','html','css','js','jquery','git','rwd','bootstrap');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Camera hot spot analysis system";
 				$description = "To develop this platfrom in order to analysis remote data of camera.</p>
 								In this project, I was responsibile for front end coding and api calling support.<br>";
-				break;						
+				break;
 			case '20150120' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','rwd','bootstrap','solr');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "EC analysis system redesign";
 				$description = "Rebulid EC system from DB to front end in order to increase this system's reusing, efficiency and usability.</p>
 								In this project, I was responsibile for rewrited all function to make code clean and maintainability.";
-				break;	
+				break;
 			case '20150129' :
 				$img_list = array('ci','php','html','css','js','jquery','rwd','bootstrap');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -269,7 +273,7 @@ class Ajax extends CI_Controller {
 				$description = "Cooperate with Common Wealth magazine company.</p>
 								Build the system to support them to analysis keyword and fanspage in every FB APPs effectively.</p>
 								In this project, I was responsibile for front end programming and back end API calling support.";
-				break;	
+				break;
 			case '20150520' :
 				$img_list = array('ci','php','restful');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -277,7 +281,15 @@ class Ajax extends CI_Controller {
 				$description = "Cooperate with OpenLife company.</p>
 								Build the system to support them to analysis FB user behavior.</p>
 								In this project, I was responsibile for back end API calling support.";
-				break;													
+				break;
+			case '20151001' :
+				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "Hybrid FB post App";
+				$description = "My first hybrid app</p>
+								Help user to post topic and comment in FB by this app.</p>
+								In this project, I was responsibile for front end programming and back end API calling support.";
+				break;
 			default:
 				$show_responsibile = false;
 				$title_name = "Oops!";
@@ -301,7 +313,7 @@ class Ajax extends CI_Controller {
 							</div>";
 		}
 
-	
+
 		echo $output_html;
 	}
 }

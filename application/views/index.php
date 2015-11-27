@@ -7,20 +7,22 @@
 		<meta name="keyword" content="<?php echo $this->keyword;?>">
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
+
 		<title>Olá</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="<?=base_url('assets/css/bootstrap.css');?>" rel="stylesheet">
 		<!--external css-->
-		
+
 		<link href="<?=base_url('assets/css/font-awesome/css/font-awesome.css');?>" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="<?=base_url('assets/js/gritter/css/jquery.gritter.css');?>" />
 		<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/lineicons/style.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/flag-icon/css/flag-icon.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/flag-icon/css/docs.css');?>">
 
 		<!-- on page scroll-->
 		<link href="<?=base_url('assets/css/full_page_style.css');?>" rel="stylesheet">
-		
+
 		<!-- timeline CSS -->
 		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 		<link href="<?=base_url('assets/css/flat.css');?>" rel="stylesheet" />
@@ -30,6 +32,7 @@
 
 		<!-- customer CSS -->
 		<link href="<?=base_url('assets/css/rewrite.css');?>" rel="stylesheet">
+		<link href="<?=base_url('assets/css/index.css');?>" rel="stylesheet">
 
 		<!-- typing CSS -->
 		<link href="<?=base_url('assets/css/typed.css');?>" rel="stylesheet">
@@ -68,7 +71,7 @@
 						<!--
 							<h1>THIS IS ME,&nbsp;<?php echo $top['name'];?></h1>
 							<p class="lead"><?php echo $top['description'];?></p>
-						-->	
+						-->
 						</div>
 					</div>
 					<div class="visible-xs">
@@ -97,47 +100,75 @@
 					</div>
 				</div>
 				<div class="row smoove-effect">
-
 					<?php
 						$is_first = true;
 						foreach($introduction AS $introduction_key=>$info){
 
 					?>
-							<div class="col-md-2 <?php if($is_first == true){ echo 'col-md-offset-2';} ?> text-center">
+							<div class="col-md-2 <?php if($is_first == true){ echo 'col-md-offset-1';} ?> text-center">
 								<div class="featurette-item">
 									<i class="fa <?php echo $info['icon'];?>"></i>
 									<div class="gray-font"><h4><?php echo $info['title'];?></h4></div>
 									<?php
-										if(is_array($info['description'])){
-											foreach($info['description'] AS $key=>$value){
+										if(isset($info['language_description']) && is_array($info['language_description'])){
+											foreach($info['language_description'] AS $language=>$value){
 									?>
-											<p><?php echo strtoupper($key);?></p>
-									<?php			
+											<div class="col-xs-12">
+												<div class="col-xs-5">
+													<div class=" flag-wrapper">
+														<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $language;?>"></div>
+													</div>
+												</div>
+												<div class="col-xs-7 no-padding ">
+													<div class="level-bar-area lv-<?php echo ($value['score']);?>">
+														<div class="level-bar"><?php echo ($value['score']);?>%</div>
+													</div>
+												</div>
+											</div>
+									<?php
 											}
-										}else{
+										}elseif(isset($info['description'])){
+											if($introduction_key == 'country'){
 									?>
-											<p><?php echo strtoupper($info['description']);?></p>
-									<?php		
+											<div class="col-xs-12">
+												<?php echo strtoupper($info['description']['title']);?>
+											</div>
+											<div class="col-xs-offset-3 col-xs-6">
+												<div class="flag-wrapper">
+													<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $info['description']['icon'];?>"></div>
+												</div>
+											</div>
+									<?php
+											}else{
+									?>
+												<p><?php echo strtoupper($info['description']);?></p>
+									<?php
+											}
+										}elseif(isset($info['places'])){
+											foreach($info['places'] AS $key=>$place){
+									?>
+											<div class="col-xs-6">
+												<?php echo strtoupper($place['title']);?>
+												<div class="flag-wrapper">
+													<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $place['icon'];?>"></div>
+												</div>
+											</div>
+									<?php
+											}
 										}
-										if($introduction_key == 'country'){
 									?>
-										<!--<p class="sm-font-size"><a class="go-to-sec"  href="#sec6">(&nbsp;WHERE I AM?&nbsp;)</a></p>-->
-									<?php		
-										}
-									?>
-									
 								</div>
 							</div>
-					<?php	
-						$is_first = false;	
+					<?php
+						$is_first = false;
 						}
 					?>
-					
+
 				</div>
 			</div>
 		</div>
 		<div class="callout" id="sec3" >
-			<div class="callout-layout">	
+			<div class="callout-layout">
 				<br>
 				<div class="col-md-12 text-center smoove-effect" data-move-x="-50px">
 					<div class="white-font">
@@ -152,10 +183,10 @@
 						<div class="col-md-12 text-center">
 							<div class="white-font">
 								<h2 class="no-newline"><?php echo strtoupper($skill_type);  ?></h2>
-							</div>	
+							</div>
 						</div>
 						<div class="row hidden-xs">
-						
+
 						<?php
 							foreach($skill_info AS $key=>$value){
 						?>
@@ -168,7 +199,7 @@
 								</div>
 								<div class="white-font"><h4 class="dynamic-font"><?php echo  strtoupper($value['title']);?></h4></div>
 							</div>
-						<?php		
+						<?php
 							}
 						?>
 						</div>
@@ -186,21 +217,21 @@
 										</div>
 									</div>
 								</div>
-						<?php		
+						<?php
 							}
 						?>
 						</div>
 						<div class="hidden-xs">
 							<br>
 						</div>
-				<?php		
+				<?php
 					}
 				?>
 				</div>
 			</div>
 		</div>
 		<div class="timeline-block" id="sec4">
-			
+
 				<div class="row">
 				  <div class="col-md-6 col-md-offset-3 text-center smoove-effect" data-move-x="-50px">
 				  <!--
@@ -227,38 +258,38 @@
 									<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="<?=base_url('assets/images/experience/full_size/'.$info['full_size_pic']);?>" rel="lightbox[timeline]">
 										<img src="<?=base_url('assets/images/experience/'.$info['pic']);?>" alt=""/>
 									</a>
-								<?php		
+								<?php
 									}else{
 								?>
 										<img src="<?=base_url('assets/images/experience/'.$info['pic']);?>" alt=""/>
-								<?php		
+								<?php
 									}
-							
+
 									if(isset($info['description'])){
 										if(isset($info['description']['title'])){
 								?>
 											<h2><?php echo strtoupper($info['description']['title']); ?></h2>
-								<?php				
+								<?php
 										}
 										if(isset($info['description']['sub_title'])){
 								?>
 											<span><?php echo $info['description']['sub_title'];?></span>
-								<?php				
-										}	
+								<?php
+										}
 									}
 									if($info['read_more'] == true){
 										if(isset($info['description'])){
 								?>
 											<div class="read_more no-push-top" data-id="<?php echo $date;?>">Read more</div>
-								<?php			
+								<?php
 										}else{
 								?>
 											<div class="read_more" data-id="<?php echo $date;?>">Read more</div>
-								<?php	
-										}		
+								<?php
+										}
 									}
-								?>	
-									
+								?>
+
 								</div>
 								<?php
 									if($info['read_more'] == true){
@@ -272,15 +303,15 @@
 									}
 							}
 						?>
-					</div> <!-- /END TIMELINE --> 
+					</div> <!-- /END TIMELINE -->
 				</div>
-				 
+
 		</div>
 
 		<hr>
 
 		<div class="blurb bright" id="sec5">
-		  
+
 		  <div class="row more-space-1">
 			  <div class="col-md-6 col-md-offset-3 text-center smoove-effect" data-move-x="-50px">
 			  <!--
@@ -291,7 +322,7 @@
 				<br>
 			  </div>
 		  </div>
-		  
+
 		  <div class="row">
 		  	<?php
 		  		$first_block = true;
@@ -299,34 +330,34 @@
 		  			if($first_block == true){
 		  	?>
 		  				<div class="col-sm-4 col-sm-offset-2">
-		  	<?php		
-		  				$first_block = false;	
+		  	<?php
+		  				$first_block = false;
 		  			}else{
 		  	?>
 		  				<div class="col-sm-4">
-		  	<?php		
+		  	<?php
 		  			}
 		  	?>
 							<div class="panel panel-default smoove-effect" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px">
 								<div class="panel-heading text-center"><h2><i class="icon-chevron-left"></i><?php echo strtoupper($file_info['title']); ?></h2></div>
-								<div class="panel-body text-center"><?php 
+								<div class="panel-body text-center"><?php
 									if( isset($file_info['description']) && $file_info['description'] != null){ echo strtoupper($file_info['description']); } ?>
 										<div class="row">&nbsp;</div>
 										<form  name="file_form" action="<?=base_url('index.php/main/fileDownload');?>" method="get">
 											<input type="hidden" value="<?php echo $language_type; ?>" name="lang_type">
-											<button class="btn btn-lg btn-primary btn-block"><?php echo strtoupper($file_info['button_title']); ?></button> 
+											<button class="btn btn-lg btn-primary btn-block"><?php echo strtoupper($file_info['button_title']); ?></button>
 										</form>
 								</div>
 							</div>
 						</div>
-		  	<?php		
+		  	<?php
 		  		}
 		  	?>
 		  </div>
 		</div>
 
 		<div class="blurb" id="sec6">
-		 
+
 			<div class="col-md-12 text-center smoove-effect" data-move-x="-50px">
 				<h1 class="no-newline " >FEEL FREE TO CONTACT ME</h1>
 				<br>
@@ -341,7 +372,7 @@
 					<h4>HERE I AM</h4>
 				</div>
 			  </div>
-			 --> 
+			 -->
 			  <div class="col-md-6  text-center smoove-effect">
 			  		<div class="row">
 			  			<div class="hidden-xs">
@@ -372,22 +403,22 @@
 				  		</div>
 				  		<div class="visible-xs col-md-12">
 				  			<hr>
-				  			<div class="col-xs-4  text-center contact-info">
+				  			<div class="col-xs-4  text-center contact-info no-padding">
 				  				<a target="_blank" href="<?php echo $contact['linkedin']; ?>">
 				  					<i class="fa fa-linkedin-square fa-5x linkedin-color"></i>
 				  				</a>
 				  			</div>
-					  		<div class="col-xs-4  text-center contact-info">	
+					  		<div class="col-xs-4  text-center contact-info no-padding">
 					  			<a target="_blank" href="<?php echo $contact['facebook']; ?>">
 				  					<i class="fa fa-facebook-square fa-5x facebook-color"></i>
 				  				</a>
 				  			</div>
-					  		<div class="col-xs-4  text-center contact-info">
+					  		<div class="col-xs-4  text-center contact-info no-padding">
 					  			<a href="mailto:<?php echo $contact['email']; ?>">
 				  					<i class="fa fa-envelope-o fa-5x email-color"></i>
 				  				</a>
-				  			</div>	
-				  		</div>	
+				  			</div>
+				  		</div>
 			  		</div>
 			  </div>
 			</div>
@@ -405,7 +436,7 @@
 				  <li><i class="icon-pinterest icon-2x"></i></li>
 				</ul>
 				<hr>
-				<p>Built with 
+				<p>Built with
 					<i class="icon-heart-empty"></i> at <a href="<?php echo ( ($foot_info['link'] != null) ? $foot_info['link'] : 'javascript:void(0);' );?>"><?php echo $foot_info['builder']; ?></a>.
 					<br><?php echo $foot_info['email']; ?>
 					<br><?php echo $foot_info['title']; ?>©copy right-<?php echo $foot_info['start_time'];?>-<?php echo $foot_info['end_time'];?>
@@ -421,7 +452,7 @@
 		<ul class="nav pull-right scroll-top">
 		  <li><a href="#" title="Scroll to top"><i class="icon-chevron-up icon-3x"></i></a></li>
 		</ul>
--->	
+-->
 
 	<!-- js placed at the end of the document so the pages load faster -->
 	<script src="<?=base_url('assets/js/jquery.js');?>"></script>
@@ -482,7 +513,7 @@
 							  {visibility: "on"}
 								  ]
 					  },
- 
+
 					  {
 						featureType: "poi.park",
 						stylers: [
@@ -500,7 +531,7 @@
 
 				var var_map = new google.maps.Map(document.getElementById("map-container"),var_mapoptions);
 
-				var_marker.setMap(var_map);	
+				var_marker.setMap(var_map);
 
 			}
 
@@ -533,7 +564,7 @@
 
 			//website scroll style
 			//$("html").niceScroll({styler:"fb",cursorcolor:"#4ECDC4", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
-			
+
 			//smooth effect of scroll to block
 
 			$('.go-to-sec').click(function(e){
@@ -541,14 +572,14 @@
 				$('html, body').animate({scrollTop: $( $.attr(this, 'href') ).offset().top}, 500);
 				return false;
 			})
-			
+
 			$('#go_top').click(function(e){
 				 e.preventDefault();
 				$('html, body').animate({scrollTop: 0}, 500);
 				return false;
 			})
-			
-			
+
+
 			// light
 			$('.tl3').timeline({
 				openTriggerClass : '.read_more',
@@ -557,17 +588,17 @@
 			});
 			$('.tl3').on('ajaxLoaded.timeline', function(e){
 				console.log(e.element.find('.timeline_open_content .info-detail'));
-				
+
 				var height = e.element.height()-60-e.element.find('h2').height();
 				e.element.find('.timeline_open_content .info-detail').css('max-height', height).mCustomScrollbar({
 					autoHideScrollbar:true,
 					theme:"light-thin"
-				});	
+				});
 			});
 
 			// Pretty simple huh?
 			var parallax = new Parallax($('#my_picture')[0]);
-			
+
 		});
 	</script>
 

@@ -36,9 +36,9 @@ class Main extends CI_Controller {
 	}
 
 	public function fileDownload(){
-		
+
 		$lang = isset($_GET['lang_type']) ? trim($_GET['lang_type']) : 'english' ;
-		
+
 		switch ($lang) {
 			case 'english':
 				$file = 'assets/files/CV/portfolio_en.pdf';
@@ -59,21 +59,35 @@ class Main extends CI_Controller {
 
 
 			force_download($name, $data);
-			
+
 		}
-		
+
 	}
 
 	public function index(){
 				//var_dump($now_year);exit;
 		$data = array();
-		
+
 		$top = array(
 			'pic'=>'my_picture/me.jpg',
 			'name'=>'lars',
 			'description'=>'The UX,<br> Project planner,<br> Front-End & Back-End Engineer',
 			);
 		$introduction = array(
+			'work_place'=>array(
+				'title'=>'WORKING PLACE',
+				'icon'=>'fa-map-o',
+				'places'=>array(
+					'0'=>array(
+						'title'=>'TAIWAN',
+						'icon'=>'tw',
+						),
+					'1'=>array(
+						'title'=>'JAPAN',
+						'icon'=>'jp',
+						),
+					),
+				),
 			'experience'=>array(
 				'title'=>'WORK EXPERIENCE',
 				'icon'=>'fa-users',
@@ -87,15 +101,27 @@ class Main extends CI_Controller {
 			'country'=>array(
 				'title'=>'country',
 				'icon'=>'fa-flag',
-				'description'=>'Taiwan',
+				'description'=>array(
+					'title'=>'Taiwan',
+					'icon'=>'tw',
+					),
 				),
 			'language'=>array(
 				'title'=>'LANGUAGE',
 				'icon'=>'fa-language',
-				'description'=>array(
-					'chinese'=>100,
-					'english'=>100,
-					'japanese'=>30,
+				'language_description'=>array(
+					'tw'=>array(
+						'score'=>100,
+						'lv'=>'nature',
+						),
+					'us'=>array(
+						'score'=>70,
+						'lv'=>'intermediate',
+						),
+					'jp'=>array(
+						'score'=>40,
+						'lv'=>'N3',
+						),
 					),
 				),
 			);
@@ -155,6 +181,12 @@ class Main extends CI_Controller {
 					'pic'=>'yii.png',
 					'title'=>'YII',
 					'short_name'=>'YII',
+					'level'=>'EXPERT',
+					),
+				'PHALCON'=>array(
+					'pic'=>'phalcon.png',
+					'title'=>'PHALCON',
+					'short_name'=>'PHALCON',
 					'level'=>'EXPERT',
 					),
 				'MySQL'=>array(
@@ -218,7 +250,7 @@ class Main extends CI_Controller {
 					'title'=>'SASS',
 					'short_name'=>'SASS',
 					'level'=>'PROFICIENT',
-					),					
+					),
 				'Flash'=>array(
 					'pic'=>'flash.png',
 					'title'=>'Flash',
@@ -441,7 +473,7 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),	
+					),
 				'25/02/2015'=>array(
 					'ajax_id'=>'20150225',
 					'introduction'=>'Rss assistance system',
@@ -452,7 +484,7 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),	
+					),
 				'01/04/2015'=>array(
 					'ajax_id'=>'20150401',
 					'introduction'=>'Supplier analysis system support',
@@ -463,7 +495,7 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),	
+					),
 				'10/04/2015'=>array(
 					'ajax_id'=>'20150410',
 					'introduction'=>'FB App analysis system',
@@ -474,8 +506,8 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),		
-				'05/20/2015'=>array(
+					),
+				'20/05/2015'=>array(
 					'ajax_id'=>'20150520',
 					'introduction'=>'FB user behavior system',
 					'pic'=>'lg/FB_user_behavior_system.jpg',
@@ -485,7 +517,18 @@ class Main extends CI_Controller {
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
-					),									
+					),
+				'01/10/2015'=>array(
+					'ajax_id'=>'20151001',
+					'introduction'=>'Hybrid FB post App',
+					'pic'=>'lg/matome.jpg',
+					'full_size_pic'=>'matome.png',
+					'description'=>array(
+						'title'=>'Hybrid FB post App',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),
 				),
 			);
 		$file_download = array(
@@ -521,7 +564,7 @@ class Main extends CI_Controller {
 		foreach($skills AS $type=>$skills_info){
 			$master_skills = $expert_skills = $proficient_skills = $familiar_skills = $beginner_skills = array();
 			foreach($skills_info AS $skill=>$info){
-				
+
 				switch (strtoupper($info['level'])) {
 					case 'MASTER':
 						$master_skills[$skill] = $info;
@@ -540,7 +583,7 @@ class Main extends CI_Controller {
 						break;
 				}
 			}
-			
+
 			$arranged_skills[$type] = array_merge( $master_skills, $expert_skills, $proficient_skills,$familiar_skills , $beginner_skills );
 		}
 
@@ -565,7 +608,7 @@ class Main extends CI_Controller {
 	}
 
 	public function aboutMe()
-	{	
+	{
 		//var_dump($now_year);exit;
 		$data = array(
 			'photo'=>'me.jpg',
@@ -598,6 +641,7 @@ class Main extends CI_Controller {
 					'PHP'=>8,
 					'CI'=>8,
 					'YII'=>7,
+					'PHALCON'=>7,
 					'MySQL'=>7,
 					'Actionscript 2.0'=>5,
 					),
@@ -620,13 +664,19 @@ class Main extends CI_Controller {
 						),
 					),
 				'III'=>array(
-					'months'=>15,
+					'months'=>24,
 					'projects'=>array(
 						'Multinational EC analysis system',
 						'Big data analysis platform',
 						'Ser api platfrom',
 						'Indexasia company data analysis system',
 						'Taipeicity social data system',
+						),
+					),
+				'teamLab'=>array(
+					'months'=>2,
+					'projects'=>array(
+						'matome hybrid App',
 						),
 					),
 				'others'=>array(
@@ -654,18 +704,18 @@ class Main extends CI_Controller {
 				array_push($skill_temp, $skill);
 				array_push($rate_temp, $rate);
 			}
-		
+
 			$data['arranged_skill_data'][$type] = json_encode(array(
 				'skills'=>$skill_temp,
 				'rates'=>$rate_temp,
 			));
 			unset($skill_temp);
 			unset($rate_temp);
-			
+
 		}
 
 		$this->load->view('aboutMe',$data);
-	}	
+	}
 
 	public function skill()
 	{
@@ -846,14 +896,14 @@ class Main extends CI_Controller {
 				array_push($skill_temp, $skill);
 				array_push($rate_temp, $rate);
 			}
-		
+
 			$data['arranged_skill_data'][$type] = json_encode(array(
 				'skills'=>$skill_temp,
 				'rates'=>$rate_temp,
 			));
 			unset($skill_temp);
 			unset($rate_temp);
-			
+
 		}
 
 		//var_dump('skill');exit;
