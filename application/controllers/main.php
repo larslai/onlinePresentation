@@ -114,6 +114,10 @@ class Main extends CI_Controller {
 						'score'=>100,
 						'lv'=>'nature',
 						),
+					'cn'=>array(
+						'score'=>85,
+						'lv'=>'upper-intermediate',
+						),
 					'us'=>array(
 						'score'=>70,
 						'lv'=>'intermediate',
