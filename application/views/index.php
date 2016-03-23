@@ -66,21 +66,15 @@
 		<div id="sec1" class="blurb">
 			<div class="container">
 				<div class="row">
-					<div class="hidden-xs">
-						<div class="col-md-7 write-typing-effect">
-						<!--
-							<h1>THIS IS ME,&nbsp;<?php echo $top['name'];?></h1>
-							<p class="lead"><?php echo $top['description'];?></p>
-						-->
-						</div>
+					<div class="col-sm-7 col-md-7 col-lg-6 write-typing-effect hidden-xs">
+						<h1>THIS IS ME,&nbsp;<?php echo $top['name'];?></h1>
+						<p class="lead"><?php echo $top['description'];?></p>
 					</div>
-					<div class="visible-xs">
-						<div class="col-md-7">
-							<h1>THIS IS ME,&nbsp;<?php echo $top['name'];?></h1>
-							<p class="lead"><?php echo $top['description'];?></p>
-						</div>
+					<div class="col-xs-12 visible-xs">
+						<h1>THIS IS ME,&nbsp;<?php echo $top['name'];?></h1>
+						<p class="lead"><?php echo $top['description'];?></p>
 					</div>
-					<div class="col-md-5">
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
 						<div id="my_picture" class="scene">
 							<div class="layer" data-depth="0.70">
 								<!--<img src="<?=base_url('assets/images/my_picture/layer3.png');?>">-->
@@ -95,92 +89,112 @@
 		<div class="featurette" id="sec2">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="gray-font"><h2>THIS IS MY BASIC INFORMATION</h2></div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+						<div class="white-font"><h2>THIS IS MY BASIC INFORMATION</h2></div>
 					</div>
 				</div>
 				<div class="row smoove-effect">
 					<?php
-						$is_first = true;
 						foreach($introduction AS $introduction_key=>$info){
-
 					?>
-							<div class="col-md-2 <?php if($is_first == true){ echo 'col-md-offset-1';} ?> text-center">
-								<div class="featurette-item">
-									<i class="fa <?php echo $info['icon'];?>"></i>
-									<div class="gray-font"><h4><?php echo $info['title'];?></h4></div>
-									<?php
-										if(isset($info['language_description']) && is_array($info['language_description'])){
-											foreach($info['language_description'] AS $language=>$value){
-									?>
-											<div class="col-xs-12">
-												<div class="col-xs-5">
-													<div class=" flag-wrapper">
-														<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $language;?>"></div>
-													</div>
-												</div>
-												<div class="col-xs-7 no-padding ">
-													<div class="level-bar-area lv-<?php echo ($value['score']);?>">
-														<div class="level-bar"><?php echo ($value['score']);?>%</div>
-													</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-center">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 featurette-item">
+								<i class="fa <?php echo $info['icon'];?>"></i>
+								<div class="white-font"><h4><?php echo $info['title'];?></h4></div>
+							</div>
+							<?php
+								if(isset($info['language_description']) && is_array($info['language_description'])){
+									$is_first = true;
+									foreach($info['language_description'] AS $language=>$value){
+							?>
+										<div class="col-xs-12 col-sm-3 col-md-3 col-lg-11 col-lg-offset-1">
+											<div class="col-xs-6 col-sm-12 col-md-12 col-lg-6">
+												<div class=" flag-wrapper">
+													<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $language;?>"></div>
 												</div>
 											</div>
-									<?php
-											}
-										}elseif(isset($info['description'])){
-											if($introduction_key == 'country'){
-									?>
-											<div class="col-xs-12">
-												<?php echo strtoupper($info['description']['title']);?>
+											<div class="col-xs-6 col-sm-12 col-md-12 col-lg-6 no-padding">
+												<span class="language-score" data-value="<?php echo ($value['score']);?>">0%</span>
 											</div>
-											<div class="col-xs-offset-3 col-xs-6">
+											<!--
+											<div class="col-sm-12 col-md-12 col-lg-6 no-padding hidden-xs">
+												<div class="col-sm-10 col-md-10 col-lg-2 level-bar-area lv-<?php echo ($value['score']);?>">
+													<div class="level-bar"><?php echo ($value['score']);?>%</div>
+												</div>
+											</div>
+											-->
+										</div>
+							<?php
+										$is_first = false;
+									}
+								}elseif(isset($info['description'])){
+									if($introduction_key == 'country'){
+							?>
+										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+											<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4  hidden-xs hidden-lg">
+												<span class="country-word">
+													<?php echo strtoupper($info['description']['title']);?>
+												</span>
+											</div>
+											<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-1">
 												<div class="flag-wrapper">
 													<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $info['description']['icon'];?>"></div>
 												</div>
 											</div>
-									<?php
-											}else{
-									?>
-												<p><?php echo strtoupper($info['description']);?></p>
-									<?php
-											}
-										}elseif(isset($info['places'])){
-											foreach($info['places'] AS $key=>$place){
-									?>
-											<div class="col-xs-6">
-												<?php echo strtoupper($place['title']);?>
-												<div class="flag-wrapper">
-													<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $place['icon'];?>"></div>
-												</div>
+											<div class="col-xs-6 col-lg-5 visible-xs visible-lg">
+												<span class="country-word">
+													<?php echo strtoupper($info['description']['title']);?>
+												</span>
 											</div>
-									<?php
-											}
-										}
-									?>
-								</div>
-							</div>
+										</div>
+							<?php
+									}else{
+							?>
+										<span class="country-word"><?php echo strtoupper($info['description']);?></span>
+							<?php
+									}
+								}elseif(isset($info['places'])){
+									foreach($info['places'] AS $key=>$place){
+							?>
+									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-12 col-lg-offset-1 <?php if($key == 0){ echo 'col-sm-offset-2 col-md-offset-2 ';} ?>">
+										<div class="col-sm-12 col-md-12 hidden-xs hidden-lg">
+											<span class="country-word"><?php echo strtoupper($place['title']);?></span>
+										</div>
+										<div class="col-xs-6 col-sm-12 col-md-12 col-lg-5">
+											<div class=" flag-wrapper">
+												<div class="img-thumbnail flag flag-icon-background flag-icon-<?php echo $place['icon'];?> "></div>
+											</div>
+										</div>
+										<div class="col-xs-6 col-lg-5 visible-xs visible-lg">
+											<span class="country-word"><?php echo strtoupper($place['title']);?></span>
+										</div>
+									</div>
+							<?php
+									}
+								}
+							?>
+						</div>
 					<?php
-						$is_first = false;
 						}
 					?>
-
 				</div>
+
 			</div>
 		</div>
 		<div class="callout" id="sec3" >
 			<div class="callout-layout">
 				<br>
-				<div class="col-md-12 text-center smoove-effect" data-move-x="-50px">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center smoove-effect" data-move-x="-50px">
 					<div class="white-font">
 						<h1 class="no-newline">THOSE ARE MY ABILITIES</h1>
 					</div>
 				</div>
-				<div class="col-md-12 text-center">&nbsp;</div>
-				<div class="col-md-8 col-md-offset-2 smoove-effect">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">&nbsp;</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 smoove-effect">
 				<?php
 					foreach($skills AS $skill_type=>$skill_info){
 				?>
-						<div class="col-md-12 text-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
 							<div class="white-font">
 								<h2 class="no-newline"><?php echo strtoupper($skill_type);  ?></h2>
 							</div>
@@ -190,7 +204,7 @@
 						<?php
 							foreach($skill_info AS $key=>$value){
 						?>
-							<div class="col-sm-2 text-center no-padding-right">
+							<div class="col-sm-3 col-md-3 col-lg-4 text-center no-padding-right">
 								<div class="viewport window-style">
 									<a href="javascript:void(0);">
 										<span class="dark-background"><?php echo  strtoupper($value['level']);?></span>
@@ -208,7 +222,7 @@
 							foreach($skill_info AS $key=>$value){
 						?>
 								<div class="show-skill-mobile">
-									<div class="col-sm-2 text-center">
+									<div class="col-xs-12 text-center">
 										<div class="viewport mobile-style">
 											<a href="javascript:void(0);">
 												<span class="dark-background"><?php echo  strtoupper($value['short_name']);?></span>
@@ -233,7 +247,7 @@
 		<div class="timeline-block" id="sec4">
 
 				<div class="row">
-				  <div class="col-md-6 col-md-offset-3 text-center smoove-effect" data-move-x="-50px">
+				  <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center smoove-effect" data-move-x="-50px">
 				  <!--
 					<h4>I COME FROM TAIWAN, TAIPEI</h4>
 					<h2>TAKE A LOOK MY WORK EXPERIENCE</h2>
@@ -313,7 +327,7 @@
 		<div class="blurb bright" id="sec5">
 
 		  <div class="row more-space-1">
-			  <div class="col-md-6 col-md-offset-3 text-center smoove-effect" data-move-x="-50px">
+			  <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center smoove-effect" data-move-x="-50px">
 			  <!--
 				<h4>HERE HAVE SOME DIFFERNET LANGUAGE PORTFOLIO..</h4>
 				<h2 class="no-newline">OH MY GOD, IT'S</h2>&nbsp;<h1 class="no-newline">FREE!</h1>
@@ -329,24 +343,28 @@
 		  		foreach($file_download AS $language_type=>$file_info){
 		  			if($first_block == true){
 		  	?>
-		  				<div class="col-sm-4 col-sm-offset-2">
+		  				<div class="col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-3 col-lg-offset-3">
 		  	<?php
 		  				$first_block = false;
 		  			}else{
 		  	?>
-		  				<div class="col-sm-4">
+		  				<div class="col-sm-4 col-md-4 col-lg-3">
 		  	<?php
 		  			}
 		  	?>
 							<div class="panel panel-default smoove-effect" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px">
 								<div class="panel-heading text-center"><h2><i class="icon-chevron-left"></i><?php echo strtoupper($file_info['title']); ?></h2></div>
-								<div class="panel-body text-center"><?php
-									if( isset($file_info['description']) && $file_info['description'] != null){ echo strtoupper($file_info['description']); } ?>
-										<div class="row">&nbsp;</div>
-										<form  name="file_form" action="<?=base_url('index.php/main/fileDownload');?>" method="get">
-											<input type="hidden" value="<?php echo $language_type; ?>" name="lang_type">
-											<button class="btn btn-lg btn-primary btn-block"><?php echo strtoupper($file_info['button_title']); ?></button>
-										</form>
+								<div class="panel-body text-center">
+									<form  name="file_form" action="<?=base_url('index.php/main/fileDownload');?>" method="get">
+										<input type="hidden" value="<?php echo $language_type; ?>" name="lang_type">
+										<button class="btn btn-lg btn-primary btn-block"><?php echo strtoupper($file_info['button_title']); ?></button>
+									</form>
+									<div class="row">&nbsp;</div>
+									<?php
+										if( isset($file_info['description']) && $file_info['description'] != null){
+											echo strtoupper($file_info['description']);
+										}
+									?>
 								</div>
 							</div>
 						</div>
@@ -358,10 +376,11 @@
 
 		<div class="blurb" id="sec6">
 
-			<div class="col-md-12 text-center smoove-effect" data-move-x="-50px">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center smoove-effect" data-move-x="-50px">
 				<h1 class="no-newline " >FEEL FREE TO CONTACT ME</h1>
 				<br>
 			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">&nbsp;</div>
 			<div class="container">
 			<div class="row">
 			<!--
@@ -373,25 +392,25 @@
 				</div>
 			  </div>
 			 -->
-			  <div class="col-md-6  text-center smoove-effect">
+			  <div class="col-sm-6  col-md-6 col-lg-6 text-center smoove-effect">
 			  		<div class="row">
 			  			<div class="hidden-xs">
-				  			<div class="col-md-12 col-md-offset-7-3">
-					  			<div class="col-md-3  text-center">
+				  			<div class="col-sm-12 col-sm-offset-5 col-md-12 col-md-offset-7 col-lg-12 col-lg-offset-7">
+					  			<div class="col-sm-4 col-md-3 col-lg-3">
 					  				<a target="_blank" href="<?php echo $contact['linkedin']; ?>">
 						  				<div class="featurette-item contact-info sm-size">
 							  				<i class="fa fa-linkedin-square fa-7x linkedin-color"></i>
 							  			</div>
 						  			</a>
 					  			</div>
-					  			<div class="col-md-3  text-center">
+					  			<div class="col-sm-4 col-md-3 col-lg-3">
 					  				<a target="_blank" href="<?php echo $contact['facebook']; ?>">
 						  				<div class="featurette-item contact-info sm-size">
 							  				<i class="fa fa-facebook-square fa-7x facebook-color"></i>
 							  			</div>
 						  			</a>
 					  			</div>
-					  			<div class="col-md-3  text-center">
+					  			<div class="col-sm-4 col-md-3 col-lg-3">
 					  				<a href="mailto:<?php echo $contact['email']; ?>">
 						  				<div class="featurette-item contact-info sm-size">
 							  				<i class="fa fa-envelope-o fa-7x email-color"></i>
@@ -426,9 +445,9 @@
 		</div>
 
 		<footer>
-		  <div class="container smoove-effect">
+		  <div class="container ">
 			<div class="row">
-			  <div class="col-md-6 col-md-offset-3 text-center">
+			  <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center">
 				<ul class="list-inline">
 				  <li><i class="icon-facebook icon-2x"></i></li>
 				  <li><i class="icon-twitter icon-2x"></i></li>
@@ -445,6 +464,7 @@
 			</div>
 		  </div>
 		</footer>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">&nbsp;</div>
 <!--
 		<ul class="nav pull-right scroll-down">
 		  <li><a href="#" title="Scroll down"><i class="icon-chevron-down icon-3x"></i></a></li>
@@ -476,69 +496,14 @@
 	<!--write typing effect-->
 	<script src="<?=base_url('assets/js/typed.js');?>"></script>
 
-	<!--google map-->
-	<!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+	<!--number animation effect-->
+	<script src="<?=base_url('assets/js/jquery.animateNumber.js');?>"></script>
+
 	<script type="application/javascript">
 		$(document).ready(function () {
-/*
-			//google map
-			function init_map() {
-				var var_location = new google.maps.LatLng(25.0854061,121.5615012);
 
-				var var_mapoptions = {
-					center: var_location,
-					zoom: 6,
-					styles: [
-					  {
-						featureType: "road.local",
-						stylers: [
-							  { visibility: "off" }
-								  ]
-					  },
-					  {
-						featureType: "poi",
-							stylers: [
-							  { visibility: "off" }
-									  ]
-					  },
-					  {
-						featureType: "poi.attraction",
-						stylers: [
-							  {visibility: "on"}
-								  ]
-					  },
-					  					  {
-						featureType: "poi.place_of_worship",
-						stylers: [
-							  {visibility: "on"}
-								  ]
-					  },
-
-					  {
-						featureType: "poi.park",
-						stylers: [
-							  {visibility: "on"}
-								  ]
-					  }
-					  ],
-				};
-
-				var var_marker = new google.maps.Marker({
-					position: var_location,
-					map: var_map,
-					title:"Venice"
-				});
-
-				var var_map = new google.maps.Map(document.getElementById("map-container"),var_mapoptions);
-
-				var_marker.setMap(var_map);
-
-			}
-
-			google.maps.event.addDomListener(window, 'load', init_map);
-*/
 			$('.smoove-effect').smoove({
-				offset:'40%',
+				offset:'20%',
 			});
 
 
@@ -599,6 +564,18 @@
 			// Pretty simple huh?
 			var parallax = new Parallax($('#my_picture')[0]);
 
+			var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
+			$('.language-score').each(function(){
+			    var score = $(this).attr("data-value");
+			    $(this).animateNumber(
+				  {
+				    number: score,
+				    easing: 'easeInQuad',
+				    numberStep: percent_number_step
+				  },
+				  8000
+				);
+			});
 		});
 	</script>
 

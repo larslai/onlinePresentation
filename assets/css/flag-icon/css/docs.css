@@ -5,6 +5,7 @@
   box-shadow: 0 0 2px black;
   overflow: hidden;
   margin-bottom: 20px;
+  border-radius: 10%;
 }
 
 .flag-wrapper:after {

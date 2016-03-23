@@ -74,20 +74,6 @@ class Main extends CI_Controller {
 			'description'=>'The UX,<br> Project planner,<br> Front-End & Back-End Engineer',
 			);
 		$introduction = array(
-			'work_place'=>array(
-				'title'=>'WORKING PLACE',
-				'icon'=>'fa-map-o',
-				'places'=>array(
-					'0'=>array(
-						'title'=>'TAIWAN',
-						'icon'=>'tw',
-						),
-					'1'=>array(
-						'title'=>'JAPAN',
-						'icon'=>'jp',
-						),
-					),
-				),
 			'experience'=>array(
 				'title'=>'WORK EXPERIENCE',
 				'icon'=>'fa-users',
@@ -106,6 +92,20 @@ class Main extends CI_Controller {
 					'icon'=>'tw',
 					),
 				),
+			'work_place'=>array(
+				'title'=>'WORKING PLACE',
+				'icon'=>'fa-map-o',
+				'places'=>array(
+					'0'=>array(
+						'title'=>'TAIWAN',
+						'icon'=>'tw',
+						),
+					'1'=>array(
+						'title'=>'JAPAN',
+						'icon'=>'jp',
+						),
+					),
+				),
 			'language'=>array(
 				'title'=>'LANGUAGE',
 				'icon'=>'fa-language',
@@ -118,16 +118,18 @@ class Main extends CI_Controller {
 						'score'=>85,
 						'lv'=>'upper-intermediate',
 						),
-					'us'=>array(
+					'gb'=>array(
 						'score'=>70,
 						'lv'=>'intermediate',
 						),
 					'jp'=>array(
-						'score'=>40,
+						'score'=>45,
 						'lv'=>'N3',
 						),
 					),
 				),
+
+
 			);
 		$skills = array(
 			'front-end'=>array(
@@ -273,10 +275,22 @@ class Main extends CI_Controller {
 					'short_name'=>'PS',
 					'level'=>'PROFICIENT',
 					),
+				'Redmine'=>array(
+					'pic'=>'redmine.jpg',
+					'title'=>'Redmine',
+					'short_name'=>'Redmine',
+					'level'=>'PROFICIENT',
+					),
+				'Vagrant'=>array(
+					'pic'=>'vagrant.jpg',
+					'title'=>'Vagrant',
+					'short_name'=>'Vagrant',
+					'level'=>'PROFICIENT',
+					),
 				),
 			);
 		$experience = array(
-			'start_time'=>'30/08/2012',
+			'start_time'=>'',
 			'data'=>array(
 				'30/08/2012'=>array(
 					'ajax_id'=>'20120830',
@@ -590,6 +604,10 @@ class Main extends CI_Controller {
 
 			$arranged_skills[$type] = array_merge( $master_skills, $expert_skills, $proficient_skills,$familiar_skills , $beginner_skills );
 		}
+
+		$reverse_experience = array_reverse($experience['data']);
+		$experience['data'] = $reverse_experience;
+		$experience['start_time'] = key($experience['data']);
 
 		$data = array(
 			'top'=>$top,
