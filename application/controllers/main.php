@@ -26,7 +26,7 @@ class Main extends CI_Controller {
 		//session_start();
 		$this->list = array(
 			'skills'=>array('front_end','back_end'),
-			'experience'=>array('meeya','leeGuitars','III','case'),
+			'experience'=>array('meeya','leeGuitars','III','case','teamlab','japan','taiwan'),
 			);
 		$ci =& get_instance();
 		$this->nowOn = $ci->router->method;
@@ -65,14 +65,78 @@ class Main extends CI_Controller {
 	}
 
 	public function index(){
-				//var_dump($now_year);exit;
-		$data = array();
 
+		$top = $this->getTopInfo();
+		$introduction = $this->getIntroductionInfo();
+		$skills = $this->getSkillsInfo();
+
+		$newest_experience_first = true;
+		$experience_img_default_size = 'lg';
+		$experience = $this->getExperienceInfo( $experience_img_default_size );
+
+		$file_download = $this->getFilesInfo();
+		$contact = $this->getContactInfo();
+		$foot_info = $this->getFootInfo();
+
+		//技能排序
+		$arranged_skills = array();
+		foreach($skills AS $type=>$skills_info){
+			$master_skills = $expert_skills = $proficient_skills = $familiar_skills = $beginner_skills = array();
+			foreach($skills_info AS $skill=>$info){
+
+				switch (strtoupper($info['level'])) {
+					case 'MASTER':
+						$master_skills[$skill] = $info;
+						break;
+					case 'EXPERT':
+						$expert_skills[$skill] = $info;
+						break;
+					case 'PROFICIENT':
+						$proficient_skills[$skill] = $info;
+						break;
+					case 'FAMILIAR':
+						$familiar_skills[$skill] = $info;
+						break;
+					default:
+						$beginner_skills[$skill] = $info;
+						break;
+				}
+			}
+
+			$arranged_skills[$type] = array_merge( $master_skills, $expert_skills, $proficient_skills,$familiar_skills , $beginner_skills );
+		}
+
+		//工作經驗顯示順序反轉,第一個顯示為最新工作
+		if( $newest_experience_first == true ){
+			$reverse_experience = array_reverse($experience['data']);
+			$experience['data'] = $reverse_experience;
+		}
+		$experience['start_time'] = key($experience['data']);
+
+		$data = array(
+			'top'=>$top,
+			'introduction'=>$introduction,
+			'skills'=>$arranged_skills,
+			'experience'=>$experience,
+			'file_download'=>$file_download,
+			'contact'=>$contact,
+			'foot_info'=>$foot_info,
+			);
+
+		$data['foot_info'] = $foot_info;
+		$this->load->view('index',$data);
+	}
+
+	private function getTopInfo(){
 		$top = array(
 			'pic'=>'my_picture/me.jpg',
 			'name'=>'lars',
 			'description'=>'The UX,<br> Project planner,<br> Front-End & Back-End Engineer',
-			);
+		);
+		return $top;
+	}
+
+	private function getIntroductionInfo(){
 		$introduction = array(
 			'experience'=>array(
 				'title'=>'WORK EXPERIENCE',
@@ -128,9 +192,12 @@ class Main extends CI_Controller {
 						),
 					),
 				),
-
-
 			);
+
+		return $introduction;
+	}
+
+	private function getSkillsInfo(){
 		$skills = array(
 			'front-end'=>array(
 				'RWD_design'=>array(
@@ -205,13 +272,13 @@ class Main extends CI_Controller {
 					'pic'=>'elastic_search.png',
 					'title'=>'elasticSearch',
 					'short_name'=>'ES',
-					'level'=>'PROFICIENT',
+					'level'=>'FAMILIAR',
 					),
 				'SOLR'=>array(
 					'pic'=>'solr.png',
 					'title'=>'SOLR',
 					'short_name'=>'SOLR',
-					'level'=>'PROFICIENT',
+					'level'=>'FAMILIAR',
 					),
 				'AS'=>array(
 					'pic'=>'actionscript.png',
@@ -279,23 +346,27 @@ class Main extends CI_Controller {
 					'pic'=>'redmine.jpg',
 					'title'=>'Redmine',
 					'short_name'=>'Redmine',
-					'level'=>'PROFICIENT',
+					'level'=>'FAMILIAR',
 					),
 				'Vagrant'=>array(
 					'pic'=>'vagrant.jpg',
 					'title'=>'Vagrant',
 					'short_name'=>'Vagrant',
-					'level'=>'PROFICIENT',
+					'level'=>'FAMILIAR',
 					),
 				),
 			);
+		return $skills;
+	}
+
+	private function getExperienceInfo( $experience_img_default_size ){
 		$experience = array(
 			'start_time'=>'',
 			'data'=>array(
 				'30/08/2012'=>array(
 					'ajax_id'=>'20120830',
 					'introduction'=>'Multinational EC system builde',
-					'pic'=>'lg/multinational_EC_system.jpg',
+					'pic'=>$experience_img_default_size.'/multinational_EC_system.jpg',
 					'full_size_pic'=>'multinational_EC_system.jpg',
 					'description'=>array(
 						'title'=>'Multinational EC system builde',
@@ -306,7 +377,7 @@ class Main extends CI_Controller {
 				'03/09/2012'=>array(
 					'ajax_id'=>'20120903',
 					'introduction'=>'Virtual currency builde',
-					'pic'=>'lg/virtual_currency.jpg',
+					'pic'=>$experience_img_default_size.'/virtual_currency.jpg',
 					'full_size_pic'=>'virtual_currency.jpg',
 					'description'=>array(
 						'title'=>'Virtual currency builde',
@@ -317,7 +388,7 @@ class Main extends CI_Controller {
 				'15/09/2012'=>array(
 					'ajax_id'=>'20120915',
 					'introduction'=>'Financial management system support',
-					'pic'=>'lg/financial_management.jpg',
+					'pic'=>$experience_img_default_size.'/financial_management.jpg',
 					'full_size_pic'=>'financial_management.png',
 					'description'=>array(
 						'title'=>'Financial management system support',
@@ -340,7 +411,7 @@ class Main extends CI_Controller {
 				'02/06/2013'=>array(
 					'ajax_id'=>'20130602',
 					'introduction'=>'Image website builde',
-					'pic'=>'lg/lee.jpg',
+					'pic'=>$experience_img_default_size.'/lee.jpg',
 					'full_size_pic'=>'lee.jpg',
 					'description'=>array(
 						'title'=>'Image website builde',
@@ -351,7 +422,7 @@ class Main extends CI_Controller {
 				'10/08/2013'=>array(
 					'ajax_id'=>'20130810',
 					'introduction'=>'Inventory Management system builde',
-					'pic'=>'lg/inventory_management.jpg',
+					'pic'=>$experience_img_default_size.'/inventory_management.jpg',
 					'full_size_pic'=>'inventory_management.jpg',
 					'description'=>array(
 						'title'=>'Inventory Management system builde',
@@ -362,7 +433,7 @@ class Main extends CI_Controller {
 				'20/11/2013'=>array(
 					'ajax_id'=>'20131120',
 					'introduction'=>'Social relationship management system support',
-					'pic'=>'lg/srm.jpg',
+					'pic'=>$experience_img_default_size.'/srm.jpg',
 					'full_size_pic'=>'srm.png',
 					'read_more'=>true,
 					'description'=>array(
@@ -373,7 +444,7 @@ class Main extends CI_Controller {
 				'01/01/2014'=>array(
 					'ajax_id'=>'20140101',
 					'introduction'=>'EC analysis system builde',
-					'pic'=>'lg/ec_analysis.jpg',
+					'pic'=>$experience_img_default_size.'/ec_analysis.jpg',
 					'full_size_pic'=>'ec_analysis.jpg',
 					'description'=>array(
 						'title'=>'EC analysis system builde',
@@ -384,7 +455,7 @@ class Main extends CI_Controller {
 				'15/01/2014'=>array(
 					'ajax_id'=>'20140115',
 					'introduction'=>'Data analysis system builde',
-					'pic'=>'lg/indexasia.jpg',
+					'pic'=>$experience_img_default_size.'/indexasia.jpg',
 					'full_size_pic'=>'indexasia.png',
 					'description'=>array(
 						'title'=>'Data analysis system builde',
@@ -407,7 +478,7 @@ class Main extends CI_Controller {
 				'15/06/2014'=>array(
 					'ajax_id'=>'20140615',
 					'introduction'=>'Taipeicity social data system builde',
-					'pic'=>'lg/taipeicity_social.jpg',
+					'pic'=>$experience_img_default_size.'/taipeicity_social.jpg',
 					'full_size_pic'=>'taipeicity_social.png',
 					'description'=>array(
 						'title'=>'Taipeicity social data system builde',
@@ -418,7 +489,7 @@ class Main extends CI_Controller {
 				'26/07/2014'=>array(
 					'ajax_id'=>'20140726',
 					'introduction'=>'SER Hackathon API platform builde',
-					'pic'=>'lg/ser_api.jpg',
+					'pic'=>$experience_img_default_size.'/ser_api.jpg',
 					'full_size_pic'=>'ser_api.png',
 					'description'=>array(
 						'title'=>'SER Hackathon API platform builde',
@@ -429,7 +500,7 @@ class Main extends CI_Controller {
 				'03/08/2014'=>array(
 					'ajax_id'=>'20140803',
 					'introduction'=>'Sport betting website redesign support',
-					'pic'=>'lg/sport_betting.jpg',
+					'pic'=>$experience_img_default_size.'/sport_betting.jpg',
 					'full_size_pic'=>'sport_betting.jpg',
 					'description'=>array(
 						'title'=>'Sport betting website redesign support',
@@ -440,7 +511,7 @@ class Main extends CI_Controller {
 				'30/08/2014'=>array(
 					'ajax_id'=>'20140830',
 					'introduction'=>'SER API platform redesign',
-					'pic'=>'lg/ser_api_redesign.jpg',
+					'pic'=>$experience_img_default_size.'/ser_api_redesign.jpg',
 					'full_size_pic'=>'ser_api_redesign.png',
 					'description'=>array(
 						'title'=>'SER API platform redesign',
@@ -451,7 +522,7 @@ class Main extends CI_Controller {
 				'04/09/2014'=>array(
 					'ajax_id'=>'20140904',
 					'introduction'=>'Credit card website redesign support',
-					'pic'=>'lg/creditcard.jpg',
+					'pic'=>$experience_img_default_size.'/creditcard.jpg',
 					'full_size_pic'=>'creditcard.jpg',
 					'description'=>array(
 						'title'=>'Credit card website redesign support',
@@ -462,7 +533,7 @@ class Main extends CI_Controller {
 				'13/12/2014'=>array(
 					'ajax_id'=>'20141213',
 					'introduction'=>'Camera hot spot analysis system builde',
-					'pic'=>'lg/hot_spot.jpg',
+					'pic'=>$experience_img_default_size.'/hot_spot.jpg',
 					'full_size_pic'=>'hot_spot.jpg',
 					'description'=>array(
 						'title'=>'Camera hot spot analysis system builde',
@@ -473,7 +544,7 @@ class Main extends CI_Controller {
 				'20/01/2015'=>array(
 					'ajax_id'=>'20150120',
 					'introduction'=>'EC analysis system redesign',
-					'pic'=>'lg/ec_analysis_redesign.jpg',
+					'pic'=>$experience_img_default_size.'/ec_analysis_redesign.jpg',
 					'full_size_pic'=>'ec_analysis_redesign.jpg',
 					'description'=>array(
 						'title'=>'EC analysis system redesign',
@@ -484,7 +555,7 @@ class Main extends CI_Controller {
 				'29/01/2015'=>array(
 					'ajax_id'=>'20150129',
 					'introduction'=>'Personal websibe builde',
-					'pic'=>'lg/my_website.jpg',
+					'pic'=>$experience_img_default_size.'/my_website.jpg',
 					'full_size_pic'=>'my_website.png',
 					'description'=>array(
 						'title'=>'Personal websibe builde',
@@ -495,7 +566,7 @@ class Main extends CI_Controller {
 				'25/02/2015'=>array(
 					'ajax_id'=>'20150225',
 					'introduction'=>'Rss assistance system',
-					'pic'=>'lg/rss_post_assistance.jpg',
+					'pic'=>$experience_img_default_size.'/rss_post_assistance.jpg',
 					'full_size_pic'=>'rss_post_assistance.png',
 					'description'=>array(
 						'title'=>'Rss assistance system',
@@ -506,7 +577,7 @@ class Main extends CI_Controller {
 				'01/04/2015'=>array(
 					'ajax_id'=>'20150401',
 					'introduction'=>'Supplier analysis system support',
-					'pic'=>'lg/supplier_analysis_system.jpg',
+					'pic'=>$experience_img_default_size.'/supplier_analysis_system.jpg',
 					'full_size_pic'=>'supplier_analysis_system.jpg',
 					'description'=>array(
 						'title'=>'Supplier analysis system support',
@@ -517,7 +588,7 @@ class Main extends CI_Controller {
 				'10/04/2015'=>array(
 					'ajax_id'=>'20150410',
 					'introduction'=>'FB App analysis system',
-					'pic'=>'lg/FB_app_analysis_system.jpg',
+					'pic'=>$experience_img_default_size.'/FB_app_analysis_system.jpg',
 					'full_size_pic'=>'FB_app_analysis_system.jpg',
 					'description'=>array(
 						'title'=>'FB App analysis system',
@@ -528,7 +599,7 @@ class Main extends CI_Controller {
 				'20/05/2015'=>array(
 					'ajax_id'=>'20150520',
 					'introduction'=>'FB user behavior system',
-					'pic'=>'lg/FB_user_behavior_system.jpg',
+					'pic'=>$experience_img_default_size.'/FB_user_behavior_system.jpg',
 					'full_size_pic'=>'FB_user_behavior_system.jpg',
 					'description'=>array(
 						'title'=>'FB user behavior system',
@@ -539,7 +610,7 @@ class Main extends CI_Controller {
 				'01/10/2015'=>array(
 					'ajax_id'=>'20151001',
 					'introduction'=>'Hybrid FB post App',
-					'pic'=>'lg/matome.jpg',
+					'pic'=>$experience_img_default_size.'/matome.jpg',
 					'full_size_pic'=>'matome.png',
 					'description'=>array(
 						'title'=>'Hybrid FB post App',
@@ -547,8 +618,23 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
+				'01/01/2016'=>array(
+					'ajax_id'=>'20160101',
+					'introduction'=>'App and product management system',
+					'pic'=>$experience_img_default_size.'/muji.jpg',
+					'full_size_pic'=>'muji.png',
+					'description'=>array(
+						'title'=>'App and product management system',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),
 				),
 			);
+		return $experience;
+	}
+
+	private function getFilesInfo(){
 		$file_download = array(
 			'english'=>array(
 				'title'=>'english',
@@ -561,6 +647,10 @@ class Main extends CI_Controller {
 				'button_title'=>'下載',
 				),
 			);
+		return $file_download;
+	}
+
+	private function getContactInfo(){
 		$contact = array(
 			'facebook'=>'https://www.facebook.com/lars247247',
 			'linkedin'=>'http://tw.linkedin.com/in/larsali',
@@ -568,6 +658,10 @@ class Main extends CI_Controller {
 			'title'=>'lars247247@gmail.com',
 			'sub_title'=>'feel free to contact me via those way',
 			);
+		return $contact;
+	}
+
+	private function getFootInfo(){
 		$foot_info = array(
 			'builder'=>'Larslai',
 			'email'=>'lars247247@gmail.com',
@@ -576,375 +670,9 @@ class Main extends CI_Controller {
 			'title'=>"Peace & Love",
 			'start_time' => '2014',
 			'end_time' => date('Y'),
-			);
-		//技能排序
-		$arranged_skills = array();
-		foreach($skills AS $type=>$skills_info){
-			$master_skills = $expert_skills = $proficient_skills = $familiar_skills = $beginner_skills = array();
-			foreach($skills_info AS $skill=>$info){
+		);
 
-				switch (strtoupper($info['level'])) {
-					case 'MASTER':
-						$master_skills[$skill] = $info;
-						break;
-					case 'EXPERT':
-						$expert_skills[$skill] = $info;
-						break;
-					case 'PROFICIENT':
-						$proficient_skills[$skill] = $info;
-						break;
-					case 'FAMILIAR':
-						$familiar_skills[$skill] = $info;
-						break;
-					default:
-						$beginner_skills[$skill] = $info;
-						break;
-				}
-			}
-
-			$arranged_skills[$type] = array_merge( $master_skills, $expert_skills, $proficient_skills,$familiar_skills , $beginner_skills );
-		}
-
-		$reverse_experience = array_reverse($experience['data']);
-		$experience['data'] = $reverse_experience;
-		$experience['start_time'] = key($experience['data']);
-
-		$data = array(
-			'top'=>$top,
-			'introduction'=>$introduction,
-			'skills'=>$arranged_skills,
-			'experience'=>$experience,
-			'file_download'=>$file_download,
-			'contact'=>$contact,
-			'foot_info'=>$foot_info,
-			);
-
-		$data['foot_info'] = $foot_info;
-		$this->load->view('index',$data);
-	}
-
-	public function portfolio()
-	{
-		//var_dump($this->config->config['base_url']);exit;
-		$this->load->view('portfolio');
-	}
-
-	public function aboutMe()
-	{
-		//var_dump($now_year);exit;
-		$data = array(
-			'photo'=>'me.jpg',
-			'name'=>array(
-				'ch'=>'賴彥伸',
-				'en'=>'Lars lai',
-				),
-			'language'=>array('english','chinese'),
-			'age'=>date('Y') - 1987,
-			'position'=>'web engineer',
-			'education'=>array(
-				'degree'=>'Master',
-				'major'=>'Information management',
-				'school'=>'',
-				),
-			'skills'=>array(
-				'front_end'=>array(
-					'RWD design'=> 7,
-					'HTML'=>8,
-					'Bootstrap'=>7,
-					'Javascript'=>6,
-					'Jquery'=>6,
-					'CSS'=>7,
-					'SASS'=>5,
-					'Flash'=>4,
-					'Illustrator'=>5,
-					'Photoshop'=>6,
-					),
-				'back_end'=>array(
-					'PHP'=>8,
-					'CI'=>8,
-					'YII'=>7,
-					'PHALCON'=>7,
-					'MySQL'=>7,
-					'Actionscript 2.0'=>5,
-					),
-				),
-			'seniority'=>0,
-			'experience'=>array(
-				'meeya'=>array(
-					'months'=>12,
-					'projects'=>array(
-						'Multinational EC system',
-						'Financial management system',
-						'OTP system',
-						),
-					),
-				'leeGuitars'=>array(
-					'months'=>6,
-					'projects'=>array(
-						'Lee guitars product website',
-						'Inventory Management system',
-						),
-					),
-				'III'=>array(
-					'months'=>24,
-					'projects'=>array(
-						'Multinational EC analysis system',
-						'Big data analysis platform',
-						'Ser api platfrom',
-						'Indexasia company data analysis system',
-						'Taipeicity social data system',
-						),
-					),
-				'teamLab'=>array(
-					'months'=>2,
-					'projects'=>array(
-						'matome hybrid App',
-						),
-					),
-				'others'=>array(
-					'months'=>4,
-					'projects'=>array(
-						'Rakuten sport betting website redesign support',
-						'Rakuten credit card website redesign support',
-						'Camera hot spot analysis system',
-						),
-					),
-				),
-			);
-
-		//計算總年資
-		foreach($data['experience'] AS $company=>$info){
-			$data['seniority'] += $info['months'];
-		}
-		$data['seniority'] = ceil($data['seniority'] / 12);
-
-		//整理skill資料成陣列格式
-		foreach($data['skills'] AS $type=>$skill_data){
-			$skill_temp = array();
-			$rate_temp = array();
-			foreach($skill_data AS $skill=>$rate){
-				array_push($skill_temp, $skill);
-				array_push($rate_temp, $rate);
-			}
-
-			$data['arranged_skill_data'][$type] = json_encode(array(
-				'skills'=>$skill_temp,
-				'rates'=>$rate_temp,
-			));
-			unset($skill_temp);
-			unset($rate_temp);
-
-		}
-
-		$this->load->view('aboutMe',$data);
-	}
-
-	public function skill()
-	{
-				$data = array(
-			'photo'=>'me.jpg',
-			'name'=>array(
-				'ch'=>'賴彥伸',
-				'en'=>'Lars lai',
-				),
-			'language'=>array('english','chinese'),
-			'age'=>date('Y') - 1987,
-			'position'=>'web engineer',
-			'education'=>array(
-				'degree'=>'Master',
-				'major'=>'Information management',
-				'school'=>'National Sun Yat-sen University',
-				),
-			'portfolio'=>array(
-				'1'=>array(
-					'title'=>'Multinational EC system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','YII','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'2'=>array(
-					'title'=>'Financial system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','YII','HTML','Jqvascript','Jquery','OTP system','MySQL'
-						),
-					),
-				'3'=>array(
-					'title'=>'Product website',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'4'=>array(
-					'title'=>'Inventory Management system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'5'=>array(
-					'title'=>'EC analysis system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'6'=>array(
-					'title'=>'Big data analysis platform',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'7'=>array(
-					'title'=>'Ser api platfrom',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'8'=>array(
-					'title'=>'Data analysis system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'9'=>array(
-					'title'=>'Taipeicity social data system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				'10'=>array(
-					'title'=>'sport betting website redesign',
-					'img'=>'',
-					'support'=>array(
-						'HTML','Jqvascript','Jquery'
-						),
-					),
-				'11'=>array(
-					'title'=>'credit card website redesign',
-					'img'=>'',
-					'support'=>array(
-						'HTML','Jqvascript','Jquery'
-						),
-					),
-				'12'=>array(
-					'title'=>'Hot spot analysis system',
-					'img'=>'',
-					'support'=>array(
-						'PHP','CI','HTML','Jqvascript','Jquery','MySQL'
-						),
-					),
-				),
-			'skills'=>array(
-				'front_end'=>array(
-					'RWD design'=> 7,
-					'HTML'=>8,
-					'Javascript'=>6,
-					'Jquery'=>7,
-					'CSS'=>7,
-					),
-				'back_end'=>array(
-					'PHP'=>8,
-					'CI'=>8,
-					'YII'=>7,
-					'MySQL'=>7,
-					'Actionscript 2.0'=>5,
-					),
-				'tools'=>array(
-					'Bootstrap'=>7,
-					'Git'=>7,
-					'SASS'=>5,
-					'Flash'=>4,
-					'Illustrator'=>5,
-					'Photoshop'=>6,
-					),
-				),
-			'seniority'=>0,
-			'experience'=>array(
-				'meeya'=>array(
-					'months'=>12,
-					'projects'=>array(
-						'Multinational EC system',
-						'Financial management system',
-						'OTP system',
-						),
-					),
-				'leeGuitars'=>array(
-					'months'=>6,
-					'projects'=>array(
-						'Lee guitars product website',
-						'Inventory Management system',
-						),
-					),
-				'III'=>array(
-					'months'=>15,
-					'projects'=>array(
-						'Multinational EC analysis system',
-						'Big data analysis platform',
-						'Ser api platfrom',
-						'Indexasia company data analysis system',
-						'Taipeicity social data system',
-						),
-					),
-				'others'=>array(
-					'months'=>4,
-					'projects'=>array(
-						'Rakuten sport betting website redesign support',
-						'Rakuten credit card website redesign support',
-						'Camera hot spot analysis system',
-						),
-					),
-				),
-			);
-
-		//計算總年資
-		foreach($data['experience'] AS $company=>$info){
-			$data['seniority'] += $info['months'];
-		}
-		$data['seniority'] = ceil($data['seniority'] / 12);
-
-		//整理skill資料成陣列格式
-		foreach($data['skills'] AS $type=>$skill_data){
-			arsort($skill_data);
-			$skill_temp = array();
-			$rate_temp = array();
-			foreach($skill_data AS $skill=>$rate){
-				array_push($skill_temp, $skill);
-				array_push($rate_temp, $rate);
-			}
-
-			$data['arranged_skill_data'][$type] = json_encode(array(
-				'skills'=>$skill_temp,
-				'rates'=>$rate_temp,
-			));
-			unset($skill_temp);
-			unset($rate_temp);
-
-		}
-
-		//var_dump('skill');exit;
-		//var_dump($this->config->config['base_url']);exit;
-		$this->load->view('main');
-	}
-
-	public function experience()
-	{
-		//var_dump('experience');exit;
-		//var_dump($this->config->config['base_url']);exit;
-		$this->load->view('main');
-	}
-
-	public function contactMe()
-	{
-		//var_dump('contactMe');exit;
-		//var_dump($this->config->config['base_url']);exit;
-		$this->load->view('main');
+		return $foot_info;
 	}
 }
 

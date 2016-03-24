@@ -108,6 +108,14 @@ class Ajax extends CI_Controller {
 					$pic_name = 'restful.jpg';
 					$short_name = 'RESTFUL';
 					break;
+				case 'redmine':
+					$pic_name = 'redmine.jpg';
+					$short_name = 'REDMINE';
+					break;
+				case 'vagrant':
+					$pic_name = 'vagrant.jpg';
+					$short_name = 'VAGRANT';
+					break;
 				default:
 					# code...
 					break;
@@ -216,7 +224,7 @@ class Ajax extends CI_Controller {
 			case '20140830' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','rwd','bootstrap','es');
 				$img_dom_list = $this->genImgDOM($img_list);
-				$title_name = "SER API platform redesign";
+				$title_name = "SER API redesign";
 				$description = "After finished hackathon activity, we reformed SER system to become the business API platform.</p>
 								In this project, I was responsibile for front end support and back end API function coding.</p>
 								You can visit this platform by <a href=\"http://api.ser.ideas.iii.org.tw/docs/\" target=\"_blank\">here</a>";
@@ -283,12 +291,20 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for back end API calling support.";
 				break;
 			case '20151001' :
-				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap');
+				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap','lamp','mysql');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Hybrid FB post App";
 				$description = "My first hybrid app</p>
 								Help user to post topic and comment in FB by this app.</p>
 								In this project, I was responsibile for front end programming and back end API calling support.";
+				break;
+			case '20160101' :
+				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap','redmine','vagrant','lamp','mysql','git');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "APP and product management system";
+				$description = "Cooperate with MUJI company</p>
+								Build the multinational version management system.</p>
+								In this project, I was responsibile for front end and back end programming support.";
 				break;
 			default:
 				$show_responsibile = false;
