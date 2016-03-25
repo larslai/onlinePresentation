@@ -7,7 +7,7 @@
 		<meta name="keyword" content="<?php echo $this->keyword;?>">
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+		<link href="<?=base_url('assets/images/my_picture/favicon.jpg');?>" rel='icon' type='image/x-icon'/>
 		<title>Olá</title>
 
 		<!-- Bootstrap core CSS -->
@@ -114,7 +114,7 @@
 												</div>
 											</div>
 											<div class="col-xs-6 col-sm-12 col-md-12 col-lg-6 no-padding">
-												<span class="language-score" data-value="<?php echo ($value['score']);?>">0%</span>
+												<span class="language-score js-score-animation" data-value="<?php echo ($value['score']);?>">0%</span>
 											</div>
 											<!--
 											<div class="col-sm-12 col-md-12 col-lg-6 no-padding hidden-xs">
@@ -147,6 +147,14 @@
 												</span>
 											</div>
 										</div>
+							<?php
+									}elseif($introduction_key == 'experience'){
+							?>
+										<span class="country-word js-experience-years-animation" data-value="<?php echo ($info['description']);?>"><?php echo strtoupper($info['description']);?> YEARS</span>
+							<?php
+									}elseif($introduction_key == 'age'){
+							?>
+										<span class="country-word js-age-animation" data-value="<?php echo ($info['description']);?>"><?php echo strtoupper($info['description']);?></span>
 							<?php
 									}else{
 							?>
@@ -204,7 +212,7 @@
 						<?php
 							foreach($skill_info AS $key=>$value){
 						?>
-							<div class="col-sm-3 col-md-3 col-lg-4 text-center no-padding-right">
+							<div class="col-sm-3 col-md-3 col-lg-3 text-center no-padding-right">
 								<div class="viewport window-style">
 									<a href="javascript:void(0);">
 										<span class="dark-background"><?php echo  strtoupper($value['level']);?></span>
@@ -565,7 +573,7 @@
 			var parallax = new Parallax($('#my_picture')[0]);
 
 			var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
-			$('.language-score').each(function(){
+			$('.js-score-animation').each(function(){
 			    var score = $(this).attr("data-value");
 			    $(this).animateNumber(
 				  {
@@ -576,6 +584,31 @@
 				  8000
 				);
 			});
+
+			var experience_years_number_step = $.animateNumber.numberStepFactories.append(' YEARS');
+			$('.js-experience-years-animation').each(function(){
+			    var experience_years = $(this).attr("data-value");
+			    $(this).animateNumber(
+				  {
+				    number: experience_years,
+				    easing: 'easeInQuad',
+				    numberStep: experience_years_number_step
+				  },
+				  3000
+				);
+			});
+
+			$('.js-age-animation').each(function(){
+			    var age = $(this).attr("data-value");
+			    $(this).animateNumber(
+				  {
+				    number: age,
+				    easing: 'easeInQuad',
+				  },
+				  5000
+				);
+			});
+
 		});
 	</script>
 

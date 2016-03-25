@@ -141,7 +141,7 @@ class Main extends CI_Controller {
 			'experience'=>array(
 				'title'=>'WORK EXPERIENCE',
 				'icon'=>'fa-users',
-				'description'=>(date('Y')-2012).' YEARS',
+				'description'=>(date('Y')-2012),
 				),
 			'age'=>array(
 				'title'=>'age',
@@ -149,7 +149,7 @@ class Main extends CI_Controller {
 				'description'=>date('Y') - 1987,
 				),
 			'country'=>array(
-				'title'=>'country',
+				'title'=>'COUNTRY',
 				'icon'=>'fa-flag',
 				'description'=>array(
 					'title'=>'Taiwan',
