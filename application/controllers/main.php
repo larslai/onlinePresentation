@@ -66,6 +66,7 @@ class Main extends CI_Controller {
 
 	public function index(){
 
+		$menu = $this->getMenuInfo();
 		$top = $this->getTopInfo();
 		$introduction = $this->getIntroductionInfo();
 		$skills = $this->getSkillsInfo();
@@ -73,6 +74,17 @@ class Main extends CI_Controller {
 		$newest_experience_first = true;
 		$experience_img_default_size = 'lg';
 		$experience = $this->getExperienceInfo( $experience_img_default_size );
+		$arranged_experience = array(
+			'start_time' => $experience['start_time'],
+			'data' => array(),
+			);
+		foreach($experience['data'] AS $date => $info){
+			if($info['display'] == false){
+				continue;
+			}
+			$arranged_experience['data'][$date] = $info;
+		}
+		$experience = $arranged_experience;
 
 		$file_download = $this->getFilesInfo();
 		$contact = $this->getContactInfo();
@@ -114,6 +126,7 @@ class Main extends CI_Controller {
 		$experience['start_time'] = key($experience['data']);
 
 		$data = array(
+			'menu'=>$menu,
 			'top'=>$top,
 			'introduction'=>$introduction,
 			'skills'=>$arranged_skills,
@@ -125,6 +138,32 @@ class Main extends CI_Controller {
 
 		$data['foot_info'] = $foot_info;
 		$this->load->view('index',$data);
+	}
+
+	private function getMenuInfo(){
+		$menu = array(
+			'sec2' => array(
+				'display' => true,
+				'title' => 'INTRODUCTION',
+				),
+			'sec3' => array(
+				'display' => true,
+				'title' => 'SKILLS',
+				),
+			'sec4' => array(
+				'display' => true,
+				'title' => 'EXPERIENCE',
+				),
+			'sec5' => array(
+				'display' => false,
+				'title' => 'PORTFOLIO',
+				),
+			'sec6' => array(
+				'display' => true,
+				'title' => 'CONTRACT',
+				),
+			);
+		return $menu;
 	}
 
 	private function getTopInfo(){
@@ -284,13 +323,19 @@ class Main extends CI_Controller {
 					'pic'=>'actionscript.png',
 					'title'=>'Actionscript',
 					'short_name'=>'AS',
-					'level'=>'PROFICIENT',
+					'level'=>'FAMILIAR',
 					),
 				'RESTful'=>array(
 					'pic'=>'restful.jpg',
 					'title'=>'RESTful',
 					'short_name'=>'RESTful',
 					'level'=>'EXPERT',
+					),
+				'Cakephp'=>array(
+					'pic'=>'cakePHP.png',
+					'title'=>'Cakephp',
+					'short_name'=>'Cakephp',
+					'level'=>'FAMILIAR',
 					),
 				),
 			'tools'=>array(
@@ -364,6 +409,7 @@ class Main extends CI_Controller {
 			'start_time'=>'',
 			'data'=>array(
 				'30/08/2012'=>array(
+					'display'=>true,
 					'ajax_id'=>'20120830',
 					'introduction'=>'Multinational EC system builde',
 					'pic'=>$experience_img_default_size.'/multinational_EC_system.jpg',
@@ -375,6 +421,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'03/09/2012'=>array(
+					'display'=>true,
 					'ajax_id'=>'20120903',
 					'introduction'=>'Virtual currency builde',
 					'pic'=>$experience_img_default_size.'/virtual_currency.jpg',
@@ -386,6 +433,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'15/09/2012'=>array(
+					'display'=>true,
 					'ajax_id'=>'20120915',
 					'introduction'=>'Financial management system support',
 					'pic'=>$experience_img_default_size.'/financial_management.jpg',
@@ -397,6 +445,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'17/12/2012'=>array(
+					'display'=>true,
 					'ajax_id'=>'20121217',
 					'introduction'=>'OTP system design',
 					'pic'=>'md/otp.jpg',
@@ -409,6 +458,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>false,
 					),
 				'02/06/2013'=>array(
+					'display'=>true,
 					'ajax_id'=>'20130602',
 					'introduction'=>'Image website builde',
 					'pic'=>$experience_img_default_size.'/lee.jpg',
@@ -420,6 +470,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'10/08/2013'=>array(
+					'display'=>false,
 					'ajax_id'=>'20130810',
 					'introduction'=>'Inventory Management system builde',
 					'pic'=>$experience_img_default_size.'/inventory_management.jpg',
@@ -431,6 +482,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'20/11/2013'=>array(
+					'display'=>true,
 					'ajax_id'=>'20131120',
 					'introduction'=>'Social relationship management system support',
 					'pic'=>$experience_img_default_size.'/srm.jpg',
@@ -442,6 +494,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'01/01/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140101',
 					'introduction'=>'EC analysis system builde',
 					'pic'=>$experience_img_default_size.'/ec_analysis.jpg',
@@ -453,6 +506,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'15/01/2014'=>array(
+					'display'=>false,
 					'ajax_id'=>'20140115',
 					'introduction'=>'Data analysis system builde',
 					'pic'=>$experience_img_default_size.'/indexasia.jpg',
@@ -464,6 +518,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'22/03/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140322',
 					'introduction'=>'Pixnet hackathon participating',
 					'pic'=>'md/pixnet.jpg',
@@ -476,6 +531,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>false,
 					),
 				'15/06/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140615',
 					'introduction'=>'Taipeicity social data system builde',
 					'pic'=>$experience_img_default_size.'/taipeicity_social.jpg',
@@ -487,6 +543,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'26/07/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140726',
 					'introduction'=>'SER Hackathon API platform builde',
 					'pic'=>$experience_img_default_size.'/ser_api.jpg',
@@ -498,6 +555,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'03/08/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140803',
 					'introduction'=>'Sport betting website redesign support',
 					'pic'=>$experience_img_default_size.'/sport_betting.jpg',
@@ -509,6 +567,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'30/08/2014'=>array(
+					'display'=>false,
 					'ajax_id'=>'20140830',
 					'introduction'=>'SER API platform redesign',
 					'pic'=>$experience_img_default_size.'/ser_api_redesign.jpg',
@@ -520,6 +579,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'04/09/2014'=>array(
+					'display'=>true,
 					'ajax_id'=>'20140904',
 					'introduction'=>'Credit card website redesign support',
 					'pic'=>$experience_img_default_size.'/creditcard.jpg',
@@ -531,17 +591,19 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'13/12/2014'=>array(
+					'display'=>false,
 					'ajax_id'=>'20141213',
-					'introduction'=>'Camera hot spot analysis system builde',
+					'introduction'=>'Instore analysis system builde',
 					'pic'=>$experience_img_default_size.'/hot_spot.jpg',
 					'full_size_pic'=>'hot_spot.jpg',
 					'description'=>array(
-						'title'=>'Camera hot spot analysis system builde',
+						'title'=>'Instore analysis system builde',
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
 				'20/01/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20150120',
 					'introduction'=>'EC analysis system redesign',
 					'pic'=>$experience_img_default_size.'/ec_analysis_redesign.jpg',
@@ -553,6 +615,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'29/01/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20150129',
 					'introduction'=>'Personal websibe builde',
 					'pic'=>$experience_img_default_size.'/my_website.jpg',
@@ -564,6 +627,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'25/02/2015'=>array(
+					'display'=>false,
 					'ajax_id'=>'20150225',
 					'introduction'=>'Rss assistance system',
 					'pic'=>$experience_img_default_size.'/rss_post_assistance.jpg',
@@ -575,6 +639,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'01/04/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20150401',
 					'introduction'=>'Supplier analysis system support',
 					'pic'=>$experience_img_default_size.'/supplier_analysis_system.jpg',
@@ -586,6 +651,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'10/04/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20150410',
 					'introduction'=>'FB App analysis system',
 					'pic'=>$experience_img_default_size.'/FB_app_analysis_system.jpg',
@@ -597,6 +663,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'20/05/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20150520',
 					'introduction'=>'FB user behavior system',
 					'pic'=>$experience_img_default_size.'/FB_user_behavior_system.jpg',
@@ -608,6 +675,7 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'01/10/2015'=>array(
+					'display'=>true,
 					'ajax_id'=>'20151001',
 					'introduction'=>'Hybrid FB post App',
 					'pic'=>$experience_img_default_size.'/matome.jpg',
@@ -619,12 +687,25 @@ class Main extends CI_Controller {
 					'need_zoom_in_pic'=>true,
 					),
 				'01/01/2016'=>array(
+					'display'=>true,
 					'ajax_id'=>'20160101',
 					'introduction'=>'App and product management system',
 					'pic'=>$experience_img_default_size.'/muji.jpg',
 					'full_size_pic'=>'muji.png',
 					'description'=>array(
 						'title'=>'App and product management system',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),
+				'06/01/2016'=>array(
+					'display'=>true,
+					'ajax_id'=>'20160601',
+					'introduction'=>'Wedding ring website',
+					'pic'=>$experience_img_default_size.'/vendome.jpg',
+					'full_size_pic'=>'vendome.png',
+					'description'=>array(
+						'title'=>'Wedding ring website',
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,

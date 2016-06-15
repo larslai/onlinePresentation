@@ -116,6 +116,10 @@ class Ajax extends CI_Controller {
 					$pic_name = 'vagrant.jpg';
 					$short_name = 'VAGRANT';
 					break;
+				case 'cakephp':
+					$pic_name = 'cakePHP.png';
+					$short_name = 'CAKEPHP';
+					break;
 				default:
 					# code...
 					break;
@@ -239,7 +243,7 @@ class Ajax extends CI_Controller {
 			case '20141213' :
 				$img_list = array('ci','php','html','css','js','jquery','git','rwd','bootstrap');
 				$img_dom_list = $this->genImgDOM($img_list);
-				$title_name = "Camera hot spot analysis system";
+				$title_name = "Instore analysis system";
 				$description = "To develop this platfrom in order to analysis remote data of camera.</p>
 								In this project, I was responsibile for front end coding and api calling support.<br>";
 				break;
@@ -251,7 +255,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for rewrited all function to make code clean and maintainability.";
 				break;
 			case '20150129' :
-				$img_list = array('ci','php','html','css','js','jquery','rwd','bootstrap');
+				$img_list = array('ci','php','html','css','js','jquery','rwd','bootstrap','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Personal websibe builde";
 				$description = "Build this website to introduce myself to the world.</p>
@@ -305,6 +309,14 @@ class Ajax extends CI_Controller {
 				$description = "Cooperate with MUJI company</p>
 								Build the multinational version management system.</p>
 								In this project, I was responsibile for front end and back end programming support.";
+				break;
+			case '20160601' :
+				$img_list = array('cakephp','php','restful','html','css','js','jquery','rwd','bootstrap','redmine','lamp','mysql','git');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "Wedding ring website";
+				$description = "Cooperate with Vendome company</p>
+								Image website for introduce the products</p>
+								In this project, I was responsibile for front end support.";
 				break;
 			default:
 				$show_responsibile = false;
