@@ -269,7 +269,7 @@
 		<?php
 			if($menu['sec4']['display'] == true){
 		?>
-			<div class="timeline-block" id="sec4">
+			<div class="timeline-block bright" id="sec4">
 
 					<div class="row">
 					  <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center smoove-effect" data-move-x="-50px">
@@ -404,7 +404,7 @@
 		<?php
 			if($menu['sec6']['display'] == true){
 		?>
-			<div class="blurb bright" id="sec6">
+			<div class="blurb" id="sec6">
 
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center smoove-effect" data-move-x="-50px">
 					<h1 class="no-newline " >FEEL FREE TO CONTACT ME</h1>
