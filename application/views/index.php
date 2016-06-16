@@ -44,11 +44,11 @@
 			<div class="container">
 			<div class="navbar-header">
 				<a href="#" class="navbar-brand" id="go_top">TOP</a>
-				<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</a>
+				</button>
 			</div>
 			<div class="navbar-collapse collapse" id="navbar">
 				<ul class="nav navbar-nav" id="nav">
@@ -426,24 +426,17 @@
 				  		<div class="row">
 				  			<div class="hidden-xs">
 					  			<div class="col-sm-12 col-sm-offset-5 col-md-12 col-md-offset-7 col-lg-12 col-lg-offset-7">
-						  			<div class="col-sm-4 col-md-3 col-lg-3">
+						  			<div class="col-sm-6 col-md-6 col-lg-6">
 						  				<a target="_blank" href="<?php echo $contact['linkedin']; ?>">
 							  				<div class="featurette-item contact-info sm-size">
 								  				<i class="fa fa-linkedin-square fa-7x linkedin-color"></i>
 								  			</div>
 							  			</a>
 						  			</div>
-						  			<div class="col-sm-4 col-md-3 col-lg-3">
+						  			<div class="col-sm-6 col-md-6 col-lg-6">
 						  				<a target="_blank" href="<?php echo $contact['facebook']; ?>">
 							  				<div class="featurette-item contact-info sm-size">
 								  				<i class="fa fa-facebook-square fa-7x facebook-color"></i>
-								  			</div>
-							  			</a>
-						  			</div>
-						  			<div class="col-sm-4 col-md-3 col-lg-3">
-						  				<a href="mailto:<?php echo $contact['email']; ?>">
-							  				<div class="featurette-item contact-info sm-size">
-								  				<i class="fa fa-envelope-o fa-7x email-color"></i>
 								  			</div>
 							  			</a>
 						  			</div>
@@ -452,19 +445,14 @@
 					  		</div>
 					  		<div class="visible-xs col-md-12">
 					  			<hr>
-					  			<div class="col-xs-4  text-center contact-info no-padding">
+					  			<div class="col-xs-6  text-center contact-info no-padding">
 					  				<a target="_blank" href="<?php echo $contact['linkedin']; ?>">
 					  					<i class="fa fa-linkedin-square fa-5x linkedin-color"></i>
 					  				</a>
 					  			</div>
-						  		<div class="col-xs-4  text-center contact-info no-padding">
+						  		<div class="col-xs-6  text-center contact-info no-padding">
 						  			<a target="_blank" href="<?php echo $contact['facebook']; ?>">
 					  					<i class="fa fa-facebook-square fa-5x facebook-color"></i>
-					  				</a>
-					  			</div>
-						  		<div class="col-xs-4  text-center contact-info no-padding">
-						  			<a href="mailto:<?php echo $contact['email']; ?>">
-					  					<i class="fa fa-envelope-o fa-5x email-color"></i>
 					  				</a>
 					  			</div>
 					  		</div>
