@@ -5,7 +5,7 @@ $(document).ready(function () {
 function loadJsonFile(){
 	//load menu
 	$.getJSON( "json_file/menu.json", function( menu_data ) {
-		initMenu(menu_data);
+		//initMenu(menu_data);
 	});
 
 	//load top
