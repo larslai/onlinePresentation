@@ -1,0 +1,22 @@
+{
+	"sec2":{
+		"display":true,
+		"title":"INTRODUCTION"
+	},
+	"sec3":{
+		"display":true,
+		"title":"SKILLS"
+	},
+	"sec4":{
+		"display":true,
+		"title":"EXPERIENCE"
+	},
+	"sec5":{
+		"display":false,
+		"title":"PORTFOLIO"
+	},
+	"sec6":{
+		"display":true,
+		"title":"CONTRACT"
+	}
+}

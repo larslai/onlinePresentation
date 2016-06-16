@@ -1,0 +1,56 @@
+{
+	"experience":{
+		"title":"WORK EXPERIENCE",
+		"icon":"fa-users",
+		"description":4
+	},
+	"age":{
+		"title":"age",
+		"icon":"fa-male",
+		"description":29
+	},
+	"country":{
+		"title":"COUNTRY",
+		"icon":"fa-flag",
+		"description":{
+			"title":"Taiwan",
+			"icon":"tw"
+		}
+	},
+	"work_place":{
+		"title":"WORKING PLACE",
+		"icon":"fa-map-o",
+		"places":[
+			{
+				"title":"TAIWAN",
+				"icon":"tw"
+			},
+			{
+				"title":"JAPAN",
+				"icon":"jp"
+			}
+		]
+	},
+	"language":{
+		"title":"LANGUAGE",
+		"icon":"fa-language",
+		"language_description":{
+			"tw":{
+				"score":100,
+				"lv":"nature"
+			},
+			"cn":{
+				"score":85,
+				"lv":"upper-intermediate"
+			},
+			"gb":{
+				"score":70,
+				"lv":"intermediate"
+			},
+			"jp":{
+				"score":45,
+				"lv":"N3"
+			}
+		}
+	}
+}
