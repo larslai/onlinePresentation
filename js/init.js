@@ -21,8 +21,14 @@ function loadJsonFile(){
 	//load skill
 	$.getJSON( "json_file/skill.json", function( skill_row_data ) {
 		skill_data = sortSkill(skill_row_data);
-		console.log(skill_data);
 		initSkill(skill_data);
+	});
+
+	//load experience
+	$.getJSON( "json_file/experience.json", function( experience_row_data ) {
+		var newest_experience_first = true;
+		experience_data = filterExperience(experience_row_data , newest_experience_first);
+		initExperience(experience_data);
 	});
 
 	//load contact
@@ -225,14 +231,14 @@ function sortSkill(skill_row_data){
 function initSkill(skill_data){
 	var skill_dom = '';
 
-	$.each( skill_data , function( skill_type, skill_info_a ) {
+	$.each( skill_data , function( skill_type, skill_info_order ) {
 		skill_dom += '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">';
 		skill_dom += '	<div class="white-font">';
 		skill_dom += '		<h2 class="no-newline">'+skill_type+'</h2>';
 		skill_dom += '	</div>';
 		skill_dom += '</div>';
 		skill_dom += '<div class="row hidden-xs">';
-		$.each( skill_info_a , function( index, skill_info ) {
+		$.each( skill_info_order , function( index, skill_info ) {
 			$.each( skill_info , function( skill_name, skill ) {
 				skill_dom += '<div class="col-sm-3 col-md-3 col-lg-3 text-center no-padding-right">';
 				skill_dom += '	<div class="viewport window-style">';
@@ -247,7 +253,7 @@ function initSkill(skill_data){
 		});
 		skill_dom += '</div>';
 		skill_dom += '<div class="row visible-xs">';
-		$.each( skill_info_a , function( index, skill_info ) {
+		$.each( skill_info_order , function( index, skill_info ) {
 			$.each( skill_info , function( skill_name, skill ) {
 				skill_dom += '<div class="show-skill-mobile">';
 				skill_dom += '	<div class="col-xs-12 text-center">';
@@ -278,6 +284,95 @@ function initSkill(skill_data){
         $(this).children('a').children('span').fadeOut(100);
     });
 }
+
+function filterExperience(experience_row_data , newest_experience_first){
+	var order_list = [];
+	var new_experience = {};
+	new_experience.start_time = experience_row_data.start_time;
+	new_experience.data = {};
+	var temp_experience_data = {};
+
+	$.each( experience_row_data.data , function( date, info ) {
+		if(info.display == true){
+			new_experience.data[date] = info;
+			order_list.push(date);
+		}
+	});
+
+	if(newest_experience_first == true){
+		order_list.reverse();
+		$.each( order_list , function( index, date_value ) {
+			temp_experience_data[date_value] = new_experience.data[date_value];
+		});
+
+		new_experience.data = temp_experience_data;
+	}
+	var start_time = Object.keys(new_experience.data)[0];
+	new_experience.start_time = start_time;
+	return new_experience;
+}
+
+function initExperience(experience_data){
+	var experience_dom = '';
+	$.each( experience_data.data , function( date, info ) {
+		experience_dom += '<div class="item" data-id="'+date+'" data-description="'+info.introduction+'">';
+		if(("need_zoom_in_pic" in info ) && info.need_zoom_in_pic == true && ("full_size_pic" in info )){
+			experience_dom += '<a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/experience/full_size/'+info.full_size_pic+'" rel="lightbox[timeline]">';
+			experience_dom += '	<img src="images/experience/'+info.pic+'" alt=""/>';
+			experience_dom += '</a>';
+		}else{
+			experience_dom += '<img src="images/experience/'+info.pic+'" alt=""/>';
+		}
+
+		if(("description" in info )){
+			if(("title" in info.description )){
+				experience_dom += '<h2>'+info.description.title+'</h2>';
+			}
+
+			if(("sub_title" in info.description )){
+				experience_dom += '<span>'+info.description.sub_title+'</span>';
+			}
+		}
+
+		if(info.read_more == true){
+			if(("description" in info )){
+				experience_dom += '<div class="read_more no-push-top" data-id="'+date+'">Read more</div>';
+			}else{
+				experience_dom += '<div class="read_more" data-id="'+date+'">Read more</div>';
+			}
+
+		}
+
+		experience_dom += '</div>';
+
+		if(info.read_more == true){
+			experience_dom += '<div class="item_open" data-id="'+date+'" data-access="ajax-content.php?item=1">';
+			experience_dom += '	<div class="item_open_content">';
+			experience_dom += '		<img class="ajaxloader" src="images/timeline/loadingAnimation.gif" alt="" />';
+			experience_dom += '	</div>';
+			experience_dom += '</div>';
+		}
+	});
+
+	$('#experience_info').append(experience_dom);
+
+	// light
+	$('.tl3').timeline({
+		openTriggerClass : '.read_more',
+		startItem : experience_data.start_time,
+		closeText : 'x'
+	});
+	$('.tl3').on('ajaxLoaded.timeline', function(e){
+		console.log(e.element.find('.timeline_open_content .info-detail'));
+
+		var height = e.element.height()-60-e.element.find('h2').height();
+		e.element.find('.timeline_open_content .info-detail').css('max-height', height).mCustomScrollbar({
+			autoHideScrollbar:true,
+			theme:"light-thin"
+		});
+	});
+}
+
 
 function initContact(contact_data){
 	$('.js-linkdin-link').attr("href", contact_data.linkedin);
