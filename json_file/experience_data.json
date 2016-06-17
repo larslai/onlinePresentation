@@ -5,7 +5,7 @@
 			"display":true,
 			"ajax_id":"20120830",
 			"introduction":"Multinational EC system builde",
-			"pic":"lg/multinational_EC_system.jpg",
+			"pic":"md/multinational_EC_system.jpg",
 			"full_size_pic":"multinational_EC_system.jpg",
 			"description":{
 			"title":"Multinational EC system builde"
@@ -17,7 +17,7 @@
 			"display":true,
 			"ajax_id":"20120903",
 			"introduction":"Virtual currency builde",
-			"pic":"lg/virtual_currency.jpg",
+			"pic":"md/virtual_currency.jpg",
 			"full_size_pic":"virtual_currency.jpg",
 			"description":{
 				"title":"Virtual currency builde"
@@ -29,7 +29,7 @@
 			"display":true,
 			"ajax_id":"20120915",
 			"introduction":"Financial management system support",
-			"pic":"lg/financial_management.jpg",
+			"pic":"md/financial_management.jpg",
 			"full_size_pic":"financial_management.png",
 			"description":{
 				"title":"Financial management system support"
@@ -53,7 +53,7 @@
 			"display":true,
 			"ajax_id":"20130602",
 			"introduction":"Image website builde",
-			"pic":"lg/lee.jpg",
+			"pic":"md/lee.jpg",
 			"full_size_pic":"lee.jpg",
 			"description":{
 				"title":"Image website builde"
@@ -65,7 +65,7 @@
 			"display":false,
 			"ajax_id":"20130810",
 			"introduction":"Inventory Management system builde",
-			"pic":"lg/inventory_management.jpg",
+			"pic":"md/inventory_management.jpg",
 			"full_size_pic":"inventory_management.jpg",
 			"description":{
 				"title":"Inventory Management system builde"
@@ -77,7 +77,7 @@
 			"display":true,
 			"ajax_id":"20131120",
 			"introduction":"Social relationship management system support",
-			"pic":"lg/srm.jpg",
+			"pic":"md/srm.jpg",
 			"full_size_pic":"srm.png",
 			"read_more":true,
 			"description":{
@@ -89,7 +89,7 @@
 			"display":true,
 			"ajax_id":"20140101",
 			"introduction":"EC analysis system builde",
-			"pic":"lg/ec_analysis.jpg",
+			"pic":"md/ec_analysis.jpg",
 			"full_size_pic":"ec_analysis.jpg",
 			"description":{
 				"title":"EC analysis system builde"
@@ -101,7 +101,7 @@
 			"display":false,
 			"ajax_id":"20140115",
 			"introduction":"Data analysis system builde",
-			"pic":"lg/indexasia.jpg",
+			"pic":"md/indexasia.jpg",
 			"full_size_pic":"indexasia.png",
 			"description":{
 				"title":"Data analysis system builde"
@@ -125,7 +125,7 @@
 			"display":true,
 			"ajax_id":"20140615",
 			"introduction":"Taipeicity social data system builde",
-			"pic":"lg/taipeicity_social.jpg",
+			"pic":"md/taipeicity_social.jpg",
 			"full_size_pic":"taipeicity_social.png",
 			"description":{
 				"title":"Taipeicity social data system builde"
@@ -137,7 +137,7 @@
 			"display":true,
 			"ajax_id":"20140726",
 			"introduction":"SER Hackathon API platform builde",
-			"pic":"lg/ser_api.jpg",
+			"pic":"md/ser_api.jpg",
 			"full_size_pic":"ser_api.png",
 			"description":{
 				"title":"SER Hackathon API platform builde"
@@ -149,7 +149,7 @@
 			"display":true,
 			"ajax_id":"20140803",
 			"introduction":"Sport betting website redesign support",
-			"pic":"lg/sport_betting.jpg",
+			"pic":"md/sport_betting.jpg",
 			"full_size_pic":"sport_betting.jpg",
 			"description":{
 				"title":"Sport betting website redesign support"
@@ -161,7 +161,7 @@
 			"display":false,
 			"ajax_id":"20140830",
 			"introduction":"SER API platform redesign",
-			"pic":"lg/ser_api_redesign.jpg",
+			"pic":"md/ser_api_redesign.jpg",
 			"full_size_pic":"ser_api_redesign.png",
 			"description":{
 				"title":"SER API platform redesign"
@@ -173,7 +173,7 @@
 			"display":true,
 			"ajax_id":"20140904",
 			"introduction":"Credit card website redesign support",
-			"pic":"lg/creditcard.jpg",
+			"pic":"md/creditcard.jpg",
 			"full_size_pic":"creditcard.jpg",
 			"description":{
 				"title":"Credit card website redesign support"
@@ -185,7 +185,7 @@
 			"display":false,
 			"ajax_id":"20141213",
 			"introduction":"Instore analysis system builde",
-			"pic":"lg/hot_spot.jpg",
+			"pic":"md/hot_spot.jpg",
 			"full_size_pic":"hot_spot.jpg",
 			"description":{
 				"title":"Instore analysis system builde"
@@ -197,7 +197,7 @@
 			"display":true,
 			"ajax_id":"20150120",
 			"introduction":"EC analysis system redesign",
-			"pic":"lg/ec_analysis_redesign.jpg",
+			"pic":"md/ec_analysis_redesign.jpg",
 			"full_size_pic":"ec_analysis_redesign.jpg",
 			"description":{
 				"title":"EC analysis system redesign"
@@ -209,7 +209,7 @@
 			"display":true,
 			"ajax_id":"20150129",
 			"introduction":"Personal websibe builde",
-			"pic":"lg/my_website.jpg",
+			"pic":"md/my_website.jpg",
 			"full_size_pic":"my_website.png",
 			"description":{
 				"title":"Personal websibe builde"
@@ -221,7 +221,7 @@
 			"display":false,
 			"ajax_id":"20150225",
 			"introduction":"Rss assistance system",
-			"pic":"lg/rss_post_assistance.jpg",
+			"pic":"md/rss_post_assistance.jpg",
 			"full_size_pic":"rss_post_assistance.png",
 			"description":{
 				"title":"Rss assistance system"
@@ -233,7 +233,7 @@
 			"display":true,
 			"ajax_id":"20150401",
 			"introduction":"Supplier analysis system support",
-			"pic":"lg/supplier_analysis_system.jpg",
+			"pic":"md/supplier_analysis_system.jpg",
 			"full_size_pic":"supplier_analysis_system.jpg",
 			"description":{
 				"title":"Supplier analysis system support"
@@ -241,11 +241,11 @@
 			"read_more":true,
 			"need_zoom_in_pic":true
 		},
-			"10/04/2015":{
+		"10/04/2015":{
 			"display":true,
 			"ajax_id":"20150410",
 			"introduction":"FB App analysis system",
-			"pic":"lg/FB_app_analysis_system.jpg",
+			"pic":"md/FB_app_analysis_system.jpg",
 			"full_size_pic":"FB_app_analysis_system.jpg",
 			"description":{
 				"title":"FB App analysis system"
@@ -257,7 +257,7 @@
 			"display":true,
 			"ajax_id":"20150520",
 			"introduction":"FB user behavior system",
-			"pic":"lg/FB_user_behavior_system.jpg",
+			"pic":"md/FB_user_behavior_system.jpg",
 			"full_size_pic":"FB_user_behavior_system.jpg",
 			"description":{
 				"title":"FB user behavior system"
@@ -269,7 +269,7 @@
 			"display":true,
 			"ajax_id":"20151001",
 			"introduction":"Hybrid FB post App",
-			"pic":"lg/matome.jpg",
+			"pic":"md/matome.jpg",
 			"full_size_pic":"matome.png",
 			"description":{
 				"title":"Hybrid FB post App"
@@ -281,7 +281,7 @@
 			"display":true,
 			"ajax_id":"20160101",
 			"introduction":"App and product management system",
-			"pic":"lg/muji.jpg",
+			"pic":"md/muji.jpg",
 			"full_size_pic":"muji.png",
 			"description":{
 				"title":"App and product management system"
@@ -293,7 +293,7 @@
 			"display":true,
 			"ajax_id":"20160601",
 			"introduction":"Wedding ring website",
-			"pic":"lg/vendome.jpg",
+			"pic":"md/vendome.jpg",
 			"full_size_pic":"vendome.png",
 			"description":{
 				"title":"Wedding ring website"

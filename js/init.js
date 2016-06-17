@@ -313,7 +313,13 @@ function filterExperience(experience_row_data , newest_experience_first){
 }
 
 function initExperience(experience_data){
+
 	var experience_dom = '';
+	var date_info;
+	var month_value;
+	var date_value;
+	var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
 	$.each( experience_data.data , function( date, info ) {
 		experience_dom += '<div class="item" data-id="'+date+'" data-description="'+info.introduction+'">';
 		if(("need_zoom_in_pic" in info ) && info.need_zoom_in_pic == true && ("full_size_pic" in info )){
@@ -324,6 +330,11 @@ function initExperience(experience_data){
 			experience_dom += '<img src="images/experience/'+info.pic+'" alt=""/>';
 		}
 
+		date_info = date.split("/");
+		month_value = parseInt(date_info[1]);
+		date_value = parseInt(date_info[0]);
+		month_name = months[month_value - 1];
+		experience_dom += '<div class="post_date">'+date_value+'<span>'+month_name+'</span></div>';
 		if(("description" in info )){
 			if(("title" in info.description )){
 				experience_dom += '<h2>'+info.description.title+'</h2>';

@@ -301,7 +301,10 @@ a:focus {
   width: 100%;
   height: 300px;
 }
-
+/* line 246, ../sass/rewrite.scss */
+.timelineFlat.timelineFlatBlog .item .post_date{
+  box-sizing:initial;
+}
 /*mobile style*/
 @media (max-width: 768px) {
   /*rewrite timeline*/
