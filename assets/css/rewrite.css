@@ -339,3 +339,7 @@ a:focus {
     padding-top: 25%;
   }
 }
+/* line 286, ../sass/rewrite.scss */
+.timelineFlat.timelineFlatBlog .item .post_date{
+  box-sizing:initial;
+}

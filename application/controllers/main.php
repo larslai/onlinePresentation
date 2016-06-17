@@ -72,7 +72,7 @@ class Main extends CI_Controller {
 		$skills = $this->getSkillsInfo();
 
 		$newest_experience_first = true;
-		$experience_img_default_size = 'lg';
+		$experience_img_default_size = 'md';
 		$experience = $this->getExperienceInfo( $experience_img_default_size );
 		$arranged_experience = array(
 			'start_time' => $experience['start_time'],

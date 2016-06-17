@@ -286,9 +286,17 @@
 							<img src="<?=base_url('assets');?>/images/timeline/loadingAnimation.gif" />
 						</div>
 						<!-- BEGIN TIMELINE -->
-						<div class="timelineFlat timelineFlatPortfolio tl3 ">
+						<div class="timelineFlat timelineFlatBlog  tl3 ">
 							<?php
 								foreach($experience['data'] AS $date=>$info){
+									$date_info = explode("/", $date);
+									$month_value = (int)$date_info[1];
+									$monthNum  = 3;
+									$dt = DateTime::createFromFormat('!m', $monthNum);
+									$monthName = strtoupper($dt->format('F'));
+									$monthName_info = str_split($monthName, 3);
+									$monthName_firstThree = $monthName_info[0];
+									$date_value = (int)$date_info[0];
 							?>
 									<div class="item" data-id="<?php echo $date;?>" data-description="<?php echo $info['introduction'];?>">
 									<?php
@@ -303,7 +311,9 @@
 											<img src="<?=base_url('assets/images/experience/'.$info['pic']);?>" alt=""/>
 									<?php
 										}
-
+									?>
+										<div class="post_date"><?php echo $date_value; ?><span><?php echo $monthName_firstThree; ?></span></div>
+									<?php
 										if(isset($info['description'])){
 											if(isset($info['description']['title'])){
 									?>
