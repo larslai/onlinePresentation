@@ -1,119 +1,5 @@
 <?php
 
-function genImgDOM($img_list){
-		$dom = '';
-		foreach($img_list as $key=>$img){
-			switch ($img) {
-				case 'phalcon':
-					$pic_name = 'phalcon.png';
-					$short_name = 'PHALCON';
-					break;
-				case 'yii':
-					$pic_name = 'yii.png';
-					$short_name = 'YII';
-					break;
-				case 'php':
-					$pic_name = 'php.png';
-					$short_name = 'PHP';
-					break;
-				case 'html':
-					$pic_name = 'html.jpg';
-					$short_name = 'HTML';
-					break;
-				case 'css':
-					$pic_name = 'css.jpg';
-					$short_name = 'CSS';
-					break;
-				case 'js':
-					$pic_name = 'js.png';
-					$short_name = 'JS';
-					break;
-				case 'jquery':
-					$pic_name = 'jquery.png';
-					$short_name = 'JQUERY';
-					break;
-				case 'lamp':
-					$pic_name = 'lamp.jpg';
-					$short_name = 'LAMP';
-					break;
-				case 'mysql':
-					$pic_name = 'mysql.png';
-					$short_name = 'MySQL';
-					break;
-				case 'git':
-					$pic_name = 'git.png';
-					$short_name = 'GIT';
-					break;
-				case 'ci':
-					$pic_name = 'ci.jpg';
-					$short_name = 'CI';
-					break;
-				case 'axure':
-					$pic_name = 'axure.jpg';
-					$short_name = 'AXURE';
-					break;
-				case 'illustrator':
-					$pic_name = 'illustrator.png';
-					$short_name = 'AI';
-					break;
-				case 'photoshop':
-					$pic_name = 'photoshop.png';
-					$short_name = 'PS';
-					break;
-				case 'bootstrap':
-					$pic_name = 'bootstrap.png';
-					$short_name = 'BOOT<br>STRAP';
-					break;
-				case 'rwd':
-					$pic_name = 'rwd.png';
-					$short_name = 'RWD';
-					break;
-				case 'es':
-					$pic_name = 'elastic_search.png';
-					$short_name = 'ELASTIC<br>SEARCH';
-					break;
-				case 'solr':
-					$pic_name = 'solr.png';
-					$short_name = 'SOLR';
-					break;
-				case 'FBSDK':
-					$pic_name = 'FBSDK.png';
-					$short_name = 'FBSDK';
-					break;
-				case 'restful':
-					$pic_name = 'restful.jpg';
-					$short_name = 'RESTFUL';
-					break;
-				case 'redmine':
-					$pic_name = 'redmine.jpg';
-					$short_name = 'REDMINE';
-					break;
-				case 'vagrant':
-					$pic_name = 'vagrant.jpg';
-					$short_name = 'VAGRANT';
-					break;
-				case 'cakephp':
-					$pic_name = 'cakePHP.png';
-					$short_name = 'CAKEPHP';
-					break;
-				default:
-					# code...
-					break;
-			}
-
-
-
-			$dom .= "<div class=\"viewport detail-style\">
-						<a href=\"javascript:void(0);\">
-							<span class=\"dark-background db-s-size\">".$short_name."</span>
-							<img class=\"img-circle xxs-size\" src=\"images/skills/".$pic_name."\"/>
-						</a>
-					</div>";
-		}
-
-		return null;
-	}
-
 	$id = $_GET['item'];
 	$show_responsibile = true;
 	switch($id) {
@@ -301,20 +187,133 @@ function genImgDOM($img_list){
 	}
 
 	if($show_responsibile == true){
-		$output_html = "<div class=\"timeline_open_content\">
-							<h2 class=\"no-marg-top\">".$title_name."</h2>
-							<div class=\"info-detail\">".$description."
+		$output_html = '<div class="timeline_open_content">
+							<h2 class="no-marg-top">'.$title_name.'</h2>
+							<div class="info-detail">'.$description.'
 								<hr>
-								<h4 class=\"no-marg-top\">Those are what I was responsibile for</h4>".$img_dom_list."
+								<h4 class="no-marg-top">Those are what I was responsibile for</h4>'.$img_dom_list.'
 							</div>
-						</div>";
+						</div>';
 	}else{
-		$output_html = "<div class=\"timeline_open_content\">
-							<h2 class=\"no-marg-top\">".$title_name."</h2>
-							<div class=\"info-detail\">".$description."
+		$output_html = '<div class="timeline_open_content">
+							<h2 class="no-marg-top">'.$title_name.'</h2>
+							<div class="info-detail">'.$description.'
 							</div>
-						</div>";
+						</div>';
 	}
 	echo $output_html;
 
+function genImgDOM($img_list){
+		$dom = '';
+		foreach($img_list as $key=>$img){
+			switch ($img) {
+				case 'phalcon':
+					$pic_name = 'phalcon.png';
+					$short_name = 'PHALCON';
+					break;
+				case 'yii':
+					$pic_name = 'yii.png';
+					$short_name = 'YII';
+					break;
+				case 'php':
+					$pic_name = 'php.png';
+					$short_name = 'PHP';
+					break;
+				case 'html':
+					$pic_name = 'html.jpg';
+					$short_name = 'HTML';
+					break;
+				case 'css':
+					$pic_name = 'css.jpg';
+					$short_name = 'CSS';
+					break;
+				case 'js':
+					$pic_name = 'js.png';
+					$short_name = 'JS';
+					break;
+				case 'jquery':
+					$pic_name = 'jquery.png';
+					$short_name = 'JQUERY';
+					break;
+				case 'lamp':
+					$pic_name = 'lamp.jpg';
+					$short_name = 'LAMP';
+					break;
+				case 'mysql':
+					$pic_name = 'mysql.png';
+					$short_name = 'MySQL';
+					break;
+				case 'git':
+					$pic_name = 'git.png';
+					$short_name = 'GIT';
+					break;
+				case 'ci':
+					$pic_name = 'ci.jpg';
+					$short_name = 'CI';
+					break;
+				case 'axure':
+					$pic_name = 'axure.jpg';
+					$short_name = 'AXURE';
+					break;
+				case 'illustrator':
+					$pic_name = 'illustrator.png';
+					$short_name = 'AI';
+					break;
+				case 'photoshop':
+					$pic_name = 'photoshop.png';
+					$short_name = 'PS';
+					break;
+				case 'bootstrap':
+					$pic_name = 'bootstrap.png';
+					$short_name = 'BOOT<br>STRAP';
+					break;
+				case 'rwd':
+					$pic_name = 'rwd.png';
+					$short_name = 'RWD';
+					break;
+				case 'es':
+					$pic_name = 'elastic_search.png';
+					$short_name = 'ELASTIC<br>SEARCH';
+					break;
+				case 'solr':
+					$pic_name = 'solr.png';
+					$short_name = 'SOLR';
+					break;
+				case 'FBSDK':
+					$pic_name = 'FBSDK.png';
+					$short_name = 'FBSDK';
+					break;
+				case 'restful':
+					$pic_name = 'restful.jpg';
+					$short_name = 'RESTFUL';
+					break;
+				case 'redmine':
+					$pic_name = 'redmine.jpg';
+					$short_name = 'REDMINE';
+					break;
+				case 'vagrant':
+					$pic_name = 'vagrant.jpg';
+					$short_name = 'VAGRANT';
+					break;
+				case 'cakephp':
+					$pic_name = 'cakePHP.png';
+					$short_name = 'CAKEPHP';
+					break;
+				default:
+					# code...
+					break;
+			}
+
+
+
+			$dom .= "<div class=\"viewport detail-style\">
+						<a href=\"javascript:void(0);\">
+							<span class=\"dark-background db-s-size\">".$short_name."</span>
+							<img class=\"img-circle xxs-size\" src=\"images/skills/".$pic_name."\"/>
+						</a>
+					</div>";
+		}
+
+		return null;
+	}
 ?>
