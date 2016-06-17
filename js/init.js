@@ -148,6 +148,9 @@ function initBasic(basic_data){
     });
 
     $('#basic_info').append(basic_dom);
+
+
+
     var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
 	$('.js-score-animation').each(function(){
 	    var score = $(this).attr("data-value");
@@ -161,12 +164,16 @@ function initBasic(basic_data){
 		);
 	});
 
+
+	var now_date = new Date();
+	var now_month = now_date.getFullYear();
+	var work_experience = now_month - 2012;
+	var now_age = now_month - 1987;
 	var experience_years_number_step = $.animateNumber.numberStepFactories.append(' YEARS');
 	$('.js-experience-years-animation').each(function(){
-	    var experience_years = $(this).attr("data-value");
 	    $(this).animateNumber(
 		  {
-		    number: experience_years,
+		    number: work_experience,
 		    easing: 'easeInQuad',
 		    numberStep: experience_years_number_step
 		  },
@@ -174,11 +181,11 @@ function initBasic(basic_data){
 		);
 	});
 
+
 	$('.js-age-animation').each(function(){
-	    var age = $(this).attr("data-value");
 	    $(this).animateNumber(
 		  {
-		    number: age,
+		    number: now_age,
 		    easing: 'easeInQuad',
 		  },
 		  5000

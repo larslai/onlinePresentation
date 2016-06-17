@@ -2,12 +2,12 @@
 	"experience":{
 		"title":"WORK EXPERIENCE",
 		"icon":"fa-users",
-		"description":4
+		"description":0
 	},
 	"age":{
 		"title":"age",
 		"icon":"fa-male",
-		"description":29
+		"description":0
 	},
 	"country":{
 		"title":"COUNTRY",

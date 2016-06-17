@@ -182,7 +182,7 @@
 			"need_zoom_in_pic":true
 		},
 		"13/12/2014":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20141213",
 			"introduction":"Instore analysis system builde",
 			"pic":"md/hot_spot.jpg",
