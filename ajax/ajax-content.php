@@ -309,7 +309,7 @@ function genImgDOM($img_list){
 			$dom .= '<div class="viewport detail-style">
 						<a href="javascript:void(0);">
 							<span class="dark-background db-s-size">'.$short_name.'</span>
-							<img class="img-circle xxs-size" src="images/skills/'.$pic_name.'"/>
+							<img class="img-circle xxs-size" src="images/skills/cakePHP.png"/>
 						</a>
 					</div>';
 		}
