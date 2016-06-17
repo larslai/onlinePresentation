@@ -346,7 +346,7 @@ function initExperience(experience_data){
 		experience_dom += '</div>';
 
 		if(info.read_more == true){
-			experience_dom += '<div class="item_open" data-id="'+date+'" data-access="ajax-content.php?item=1">';
+			experience_dom += '<div class="item_open" data-id="'+date+'" data-access="ajax/ajax-content.php?item='+info.ajax_id+'">';
 			experience_dom += '	<div class="item_open_content">';
 			experience_dom += '		<img class="ajaxloader" src="images/timeline/loadingAnimation.gif" alt="" />';
 			experience_dom += '	</div>';
