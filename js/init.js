@@ -25,7 +25,7 @@ function loadJsonFile(){
 	});
 
 	//load experience
-	$.getJSON( "json_file/experience.json", function( experience_row_data ) {
+	$.getJSON( "json_file/aaaa.json", function( experience_row_data ) {
 		var newest_experience_first = true;
 		experience_data = filterExperience(experience_row_data , newest_experience_first);
 		initExperience(experience_data);
