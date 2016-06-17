@@ -1,0 +1,305 @@
+{
+	"start_time":"",
+	"data":{
+		"30/08/2012":{
+			"display":true,
+			"ajax_id":"20120830",
+			"introduction":"Multinational EC system builde",
+			"pic":"lg/multinational_EC_system.jpg",
+			"full_size_pic":"multinational_EC_system.jpg",
+			"description":{
+			"title":"Multinational EC system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"03/09/2012":{
+			"display":true,
+			"ajax_id":"20120903",
+			"introduction":"Virtual currency builde",
+			"pic":"lg/virtual_currency.jpg",
+			"full_size_pic":"virtual_currency.jpg",
+			"description":{
+				"title":"Virtual currency builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"15/09/2012":{
+			"display":true,
+			"ajax_id":"20120915",
+			"introduction":"Financial management system support",
+			"pic":"lg/financial_management.jpg",
+			"full_size_pic":"financial_management.png",
+			"description":{
+				"title":"Financial management system support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"17/12/2012":{
+			"display":true,
+			"ajax_id":"20121217",
+			"introduction":"OTP system design",
+			"pic":"md/otp.jpg",
+			"description":{
+				"title":"OTP system design",
+				"sub_title":"Use PHP to design one time password system to increase security of management system.<\br> Responsible for php coding in this project."
+			},
+			"read_more":false,
+			"need_zoom_in_pic":false
+		},
+		"02/06/2013":{
+			"display":true,
+			"ajax_id":"20130602",
+			"introduction":"Image website builde",
+			"pic":"lg/lee.jpg",
+			"full_size_pic":"lee.jpg",
+			"description":{
+				"title":"Image website builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"10/08/2013":{
+			"display":false,
+			"ajax_id":"20130810",
+			"introduction":"Inventory Management system builde",
+			"pic":"lg/inventory_management.jpg",
+			"full_size_pic":"inventory_management.jpg",
+			"description":{
+				"title":"Inventory Management system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/11/2013":{
+			"display":true,
+			"ajax_id":"20131120",
+			"introduction":"Social relationship management system support",
+			"pic":"lg/srm.jpg",
+			"full_size_pic":"srm.png",
+			"read_more":true,
+			"description":{
+				"title":"SRM system support"
+			},
+			"need_zoom_in_pic":true
+		},
+		"01/01/2014":{
+			"display":true,
+			"ajax_id":"20140101",
+			"introduction":"EC analysis system builde",
+			"pic":"lg/ec_analysis.jpg",
+			"full_size_pic":"ec_analysis.jpg",
+			"description":{
+				"title":"EC analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"15/01/2014":{
+			"display":false,
+			"ajax_id":"20140115",
+			"introduction":"Data analysis system builde",
+			"pic":"lg/indexasia.jpg",
+			"full_size_pic":"indexasia.png",
+			"description":{
+				"title":"Data analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"22/03/2014":{
+			"display":true,
+			"ajax_id":"20140322",
+			"introduction":"Pixnet hackathon participating",
+			"pic":"md/pixnet.jpg",
+			"description":{
+				"title":"Pixnet hackathon participating",
+				"sub_title":"Design multi keyword search engine by open data that Pixnet providing.<\br> Responsible for php coding and front end support in this project."
+			},
+			"read_more":false,
+			"need_zoom_in_pic":false
+		},
+		"15/06/2014":{
+			"display":true,
+			"ajax_id":"20140615",
+			"introduction":"Taipeicity social data system builde",
+			"pic":"lg/taipeicity_social.jpg",
+			"full_size_pic":"taipeicity_social.png",
+			"description":{
+				"title":"Taipeicity social data system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"26/07/2014":{
+			"display":true,
+			"ajax_id":"20140726",
+			"introduction":"SER Hackathon API platform builde",
+			"pic":"lg/ser_api.jpg",
+			"full_size_pic":"ser_api.png",
+			"description":{
+				"title":"SER Hackathon API platform builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"03/08/2014":{
+			"display":true,
+			"ajax_id":"20140803",
+			"introduction":"Sport betting website redesign support",
+			"pic":"lg/sport_betting.jpg",
+			"full_size_pic":"sport_betting.jpg",
+			"description":{
+				"title":"Sport betting website redesign support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"30/08/2014":{
+			"display":false,
+			"ajax_id":"20140830",
+			"introduction":"SER API platform redesign",
+			"pic":"lg/ser_api_redesign.jpg",
+			"full_size_pic":"ser_api_redesign.png",
+			"description":{
+				"title":"SER API platform redesign"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"04/09/2014":{
+			"display":true,
+			"ajax_id":"20140904",
+			"introduction":"Credit card website redesign support",
+			"pic":"lg/creditcard.jpg",
+			"full_size_pic":"creditcard.jpg",
+			"description":{
+				"title":"Credit card website redesign support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"13/12/2014":{
+			"display":false,
+			"ajax_id":"20141213",
+			"introduction":"Instore analysis system builde",
+			"pic":"lg/hot_spot.jpg",
+			"full_size_pic":"hot_spot.jpg",
+			"description":{
+				"title":"Instore analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/01/2015":{
+			"display":true,
+			"ajax_id":"20150120",
+			"introduction":"EC analysis system redesign",
+			"pic":"lg/ec_analysis_redesign.jpg",
+			"full_size_pic":"ec_analysis_redesign.jpg",
+			"description":{
+				"title":"EC analysis system redesign"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"29/01/2015":{
+			"display":true,
+			"ajax_id":"20150129",
+			"introduction":"Personal websibe builde",
+			"pic":"lg/my_website.jpg",
+			"full_size_pic":"my_website.png",
+			"description":{
+				"title":"Personal websibe builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"25/02/2015":{
+			"display":false,
+			"ajax_id":"20150225",
+			"introduction":"Rss assistance system",
+			"pic":"lg/rss_post_assistance.jpg",
+			"full_size_pic":"rss_post_assistance.png",
+			"description":{
+				"title":"Rss assistance system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/04/2015":{
+			"display":true,
+			"ajax_id":"20150401",
+			"introduction":"Supplier analysis system support",
+			"pic":"lg/supplier_analysis_system.jpg",
+			"full_size_pic":"supplier_analysis_system.jpg",
+			"description":{
+				"title":"Supplier analysis system support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+			"10/04/2015":{
+			"display":true,
+			"ajax_id":"20150410",
+			"introduction":"FB App analysis system",
+			"pic":"lg/FB_app_analysis_system.jpg",
+			"full_size_pic":"FB_app_analysis_system.jpg",
+			"description":{
+				"title":"FB App analysis system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/05/2015":{
+			"display":true,
+			"ajax_id":"20150520",
+			"introduction":"FB user behavior system",
+			"pic":"lg/FB_user_behavior_system.jpg",
+			"full_size_pic":"FB_user_behavior_system.jpg",
+			"description":{
+				"title":"FB user behavior system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/10/2015":{
+			"display":true,
+			"ajax_id":"20151001",
+			"introduction":"Hybrid FB post App",
+			"pic":"lg/matome.jpg",
+			"full_size_pic":"matome.png",
+			"description":{
+				"title":"Hybrid FB post App"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/01/2016":{
+			"display":true,
+			"ajax_id":"20160101",
+			"introduction":"App and product management system",
+			"pic":"lg/muji.jpg",
+			"full_size_pic":"muji.png",
+			"description":{
+				"title":"App and product management system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"06/01/2016":{
+			"display":true,
+			"ajax_id":"20160601",
+			"introduction":"Wedding ring website",
+			"pic":"lg/vendome.jpg",
+			"full_size_pic":"vendome.png",
+			"description":{
+				"title":"Wedding ring website"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		}
+	}
+}
