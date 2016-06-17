@@ -111,7 +111,7 @@ function genImgDOM($img_list){
 					</div>";
 		}
 
-		return $dom;
+		return null;
 	}
 
 	$id = $_GET['item'];
