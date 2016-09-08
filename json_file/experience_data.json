@@ -146,7 +146,7 @@
 			"need_zoom_in_pic":true
 		},
 		"03/08/2014":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20140803",
 			"introduction":"Sport betting website redesign support",
 			"pic":"md/sport_betting.jpg",
@@ -170,7 +170,7 @@
 			"need_zoom_in_pic":true
 		},
 		"04/09/2014":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20140904",
 			"introduction":"Credit card website redesign support",
 			"pic":"md/creditcard.jpg",
