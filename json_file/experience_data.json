@@ -145,18 +145,6 @@
 			"read_more":true,
 			"need_zoom_in_pic":true
 		},
-		"03/08/2014":{
-			"display":false,
-			"ajax_id":"20140803",
-			"introduction":"Sport betting website redesign support",
-			"pic":"md/sport_betting.jpg",
-			"full_size_pic":"sport_betting.jpg",
-			"description":{
-				"title":"Sport betting website redesign support"
-			},
-			"read_more":true,
-			"need_zoom_in_pic":true
-		},
 		"30/08/2014":{
 			"display":false,
 			"ajax_id":"20140830",
@@ -165,18 +153,6 @@
 			"full_size_pic":"ser_api_redesign.png",
 			"description":{
 				"title":"SER API platform redesign"
-			},
-			"read_more":true,
-			"need_zoom_in_pic":true
-		},
-		"04/09/2014":{
-			"display":false,
-			"ajax_id":"20140904",
-			"introduction":"Credit card website redesign support",
-			"pic":"md/creditcard.jpg",
-			"full_size_pic":"creditcard.jpg",
-			"description":{
-				"title":"Credit card website redesign support"
 			},
 			"read_more":true,
 			"need_zoom_in_pic":true
