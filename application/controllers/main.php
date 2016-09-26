@@ -689,6 +689,18 @@ class Main extends CI_Controller {
 				'01/08/2016'=>array(
 					'display'=>true,
 					'ajax_id'=>'20160801',
+					'introduction'=>'Passport App Restful API',
+					'pic'=>$experience_img_default_size.'/passport.jpg',
+					'full_size_pic'=>'passport.png',
+					'description'=>array(
+						'title'=>'Wedding ring website',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),
+				'01/09/2016'=>array(
+					'display'=>true,
+					'ajax_id'=>'20160901',
 					'introduction'=>'Teamlab official website',
 					'pic'=>$experience_img_default_size.'/dotnet.jpg',
 					'full_size_pic'=>'dotnet.png',
