@@ -280,7 +280,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for back end API calling support.";
 				break;
 			case '20151001' :
-				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap','lamp','mysql');
+				$img_list = array('phalcon','php','html','css','js','jquery','rwd','bootstrap','lamp','mysql');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Hybrid FB post App";
 				$description = "My first hybrid app</p>
@@ -288,7 +288,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end programming and back end API calling support.";
 				break;
 			case '20160101' :
-				$img_list = array('phalcon','php','restful','html','css','js','jquery','rwd','bootstrap','redmine','vagrant','lamp','mysql','git');
+				$img_list = array('phalcon','php','html','css','js','jquery','rwd','bootstrap','redmine','vagrant','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "APP and product management system";
 				$description = "Cooperate with MUJI company</p>
@@ -296,12 +296,21 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end and back end programming support.";
 				break;
 			case '20160601' :
-				$img_list = array('cakephp','php','restful','html','css','js','jquery','rwd','bootstrap','redmine','lamp','mysql','git');
+				$img_list = array('cakephp','php','html','css','js','jquery','rwd','bootstrap','redmine','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Wedding ring website";
 				$description = "Cooperate with Vendome company</p>
 								Image website for introduce the products</p>
 								In this project, I was responsibile for front end support.";
+				break;
+			case '20160801' :
+				$img_list = array('phalcon','php','html','css','js','jquery','rwd','redmine','lamp','mysql','git');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "Official website";
+				$description = "Teamlab official website</p>
+								Image website for introduce the teamlab</p>
+								In this project, I was responsibile for front end and back end support.</p>
+								You can visit this platform by <a href=\"https://www.team-lab.net/\" target=\"_blank\">here</a>";
 				break;
 			default:
 				$show_responsibile = false;

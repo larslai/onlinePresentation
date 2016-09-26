@@ -674,7 +674,7 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
-				'06/01/2016'=>array(
+				'01/06/2016'=>array(
 					'display'=>true,
 					'ajax_id'=>'20160601',
 					'introduction'=>'Wedding ring website',
@@ -686,8 +686,21 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
+				'01/08/2016'=>array(
+					'display'=>true,
+					'ajax_id'=>'20160801',
+					'introduction'=>'Teamlab official website',
+					'pic'=>$experience_img_default_size.'/dotnet.jpg',
+					'full_size_pic'=>'dotnet.png',
+					'description'=>array(
+						'title'=>'Teamlab official website',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),
 				),
 			);
+
 		return $experience;
 	}
 
