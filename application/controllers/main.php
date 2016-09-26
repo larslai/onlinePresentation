@@ -554,18 +554,6 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
-				'03/08/2014'=>array(
-					'display'=>true,
-					'ajax_id'=>'20140803',
-					'introduction'=>'Sport betting website redesign support',
-					'pic'=>$experience_img_default_size.'/sport_betting.jpg',
-					'full_size_pic'=>'sport_betting.jpg',
-					'description'=>array(
-						'title'=>'Sport betting website redesign support',
-						),
-					'read_more'=>true,
-					'need_zoom_in_pic'=>true,
-					),
 				'30/08/2014'=>array(
 					'display'=>false,
 					'ajax_id'=>'20140830',
@@ -574,18 +562,6 @@ class Main extends CI_Controller {
 					'full_size_pic'=>'ser_api_redesign.png',
 					'description'=>array(
 						'title'=>'SER API platform redesign',
-						),
-					'read_more'=>true,
-					'need_zoom_in_pic'=>true,
-					),
-				'04/09/2014'=>array(
-					'display'=>true,
-					'ajax_id'=>'20140904',
-					'introduction'=>'Credit card website redesign support',
-					'pic'=>$experience_img_default_size.'/creditcard.jpg',
-					'full_size_pic'=>'creditcard.jpg',
-					'description'=>array(
-						'title'=>'Credit card website redesign support',
 						),
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,

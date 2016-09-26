@@ -217,14 +217,6 @@ class Ajax extends CI_Controller {
 				$description = "To develop SER system for business hackathon activity.</p>
 								In this project, I was responsibile for back end API function coding.";
 				break;
-			case '20140803' :
-				$img_list = array('html','css','js','jquery','git');
-				$img_dom_list = $this->genImgDOM($img_list);
-				$title_name = "Sport betting website redesign";
-				$description = "Support Japan business to redesign front end of functional webpage.</p>
-								In this project, I was responsibile for front end supprot.</p>
-								You can visit this platform by <a href=\"https://toto.rakuten.co.jp/toto/\" target=\"_blank\">here</a>";
-				break;
 			case '20140830' :
 				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','rwd','bootstrap','es');
 				$img_dom_list = $this->genImgDOM($img_list);
@@ -232,13 +224,6 @@ class Ajax extends CI_Controller {
 				$description = "After finished hackathon activity, we reformed SER system to become the business API platform.</p>
 								In this project, I was responsibile for front end support and back end API function coding.</p>
 								You can visit this platform by <a href=\"http://api.ser.ideas.iii.org.tw/docs/\" target=\"_blank\">here</a>";
-				break;
-			case '20140904' :
-				$img_list = array('html','css','js','jquery','git','rwd');
-				$img_dom_list = $this->genImgDOM($img_list);
-				$title_name = "Credit card website redesign";
-				$description = "Support Japan business to redesign front end of image webpage.</p>
-								In this project, I was responsibile for front end supprot.";
 				break;
 			case '20141213' :
 				$img_list = array('ci','php','html','css','js','jquery','git','rwd','bootstrap');
