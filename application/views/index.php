@@ -297,7 +297,7 @@
 										$date_info = explode("/", $date);
 										$month_value = (int)$date_info[1];
 										$monthNum  = 3;
-										$dt = DateTime::createFromFormat('!m', $monthNum);
+										$dt = DateTime::createFromFormat('!m', $month_value);
 										$monthName = strtoupper($dt->format('F'));
 										$monthName_info = str_split($monthName, 3);
 										$monthName_firstThree = $monthName_info[0];
