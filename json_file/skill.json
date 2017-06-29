@@ -96,7 +96,19 @@
 			"pic":"cakePHP.png",
 			"title":"Cakephp",
 			"short_name":"Cakephp",
-			"level":"BEGINNER"
+			"level":"FAMILIAR"
+		},
+		"FuelPHP":{
+			"pic":"fuelphp.png",
+			"title":"FuelPHP",
+			"short_name":"FuelPHP",
+			"level":"EXPERT"
+		},
+		"Memcached":{
+			"pic":"memcached.png",
+			"title":"Memcached",
+			"short_name":"Memcached",
+			"level":"FAMILIAR"
 		}
 	},
 	"tools":{
