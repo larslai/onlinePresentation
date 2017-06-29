@@ -218,15 +218,15 @@ class Main extends CI_Controller {
 						'lv'=>'nature',
 						),
 					'cn'=>array(
-						'score'=>85,
+						'score'=>90,
 						'lv'=>'upper-intermediate',
 						),
 					'gb'=>array(
-						'score'=>70,
+						'score'=>80,
 						'lv'=>'intermediate',
 						),
 					'jp'=>array(
-						'score'=>45,
+						'score'=>60,
 						'lv'=>'N3',
 						),
 					),
@@ -337,6 +337,18 @@ class Main extends CI_Controller {
 					'short_name'=>'Cakephp',
 					'level'=>'FAMILIAR',
 					),
+				'FuelPHP'=>array(
+					'pic'=>'fuelphp.png',
+					'title'=>'FuelPHP',
+					'short_name'=>'FuelPHP',
+					'level'=>'EXPERT',
+					),
+				'Memcached'=>array(
+					'pic'=>'memcached.png',
+					'title'=>'Memcached',
+					'short_name'=>'Memcached',
+					'level'=>'FAMILIAR',
+					),				
 				),
 			'tools'=>array(
 				'Bootstrap'=>array(
