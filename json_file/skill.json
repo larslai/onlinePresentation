@@ -109,6 +109,12 @@
 			"title":"Memcached",
 			"short_name":"Memcached",
 			"level":"FAMILIAR"
+		},
+		"Redis":{
+			"pic":"redis.png",
+			"title":"Redis",
+			"short_name":"Redis",
+			"level":"FAMILIAR"
 		}
 	},
 	"tools":{
