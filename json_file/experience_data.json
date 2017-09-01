@@ -266,7 +266,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/06/2016":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20160601",
 			"introduction":"Wedding ring website",
 			"pic":"md/vendome.jpg",
@@ -278,7 +278,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/08/2016":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20160801",
 			"introduction":"Passport App Restful API",
 			"pic":"md/passport.jpg",
@@ -290,7 +290,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/09/2016":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20160901",
 			"introduction":"Teamlab official website",
 			"pic":"md/dotnet.jpg",
