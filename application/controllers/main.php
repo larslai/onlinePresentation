@@ -349,6 +349,12 @@ class Main extends CI_Controller {
 					'short_name'=>'Memcached',
 					'level'=>'FAMILIAR',
 					),				
+				'Redis'=>array(
+					'pic'=>'redis.png',
+					'title'=>'Redis',
+					'short_name'=>'Redis',
+					'level'=>'FAMILIAR',
+					),
 				),
 			'tools'=>array(
 				'Bootstrap'=>array(
