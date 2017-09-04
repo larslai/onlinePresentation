@@ -300,6 +300,18 @@
 			},
 			"read_more":true,
 			"need_zoom_in_pic":true
-		}
+		},
+		"01/02/2017":{
+			"display":true,
+			"ajax_id":"20170201",
+			"introduction":"DMM E-commerce",
+			"pic":"md/dmm_website.jpg",
+			"full_size_pic":"dmm_website.png",
+			"description":{
+				"title":"DMM official website"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		}		
 	}
 }
