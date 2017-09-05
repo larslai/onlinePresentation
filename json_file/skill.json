@@ -176,6 +176,12 @@
 			"pic":"vagrant.jpg",
 			"title":"Vagrant",
 			"short_name":"Vagrant",
+			"level":"PROFICIENT"
+		},
+		"JENKINS":{
+			"pic":"jenkins.jpg",
+			"title":"JENKINS",
+			"short_name":"JENKINS",
 			"level":"FAMILIAR"
 		}
 	}
