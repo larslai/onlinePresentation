@@ -28,6 +28,10 @@ class Ajax extends CI_Controller {
 		$dom = '';
 		foreach($img_list as $key=>$img){
 			switch ($img) {
+				case 'fuelphp':
+					$pic_name = 'fuelphp.png';
+					$short_name = 'FUELPHP';
+					break;				
 				case 'phalcon':
 					$pic_name = 'phalcon.png';
 					$short_name = 'PHALCON';
@@ -120,7 +124,19 @@ class Ajax extends CI_Controller {
 					$pic_name = 'cakePHP.png';
 					$short_name = 'CAKEPHP';
 					break;
-				default:
+				case 'jenkins':
+					$pic_name = 'jenkis.jpg';
+					$short_name = 'JENKINS';
+					break;
+				case 'memcached':
+					$pic_name = 'memcached.png';
+					$short_name = 'MEMCACHED';
+					break;
+				case 'redis':
+					$pic_name = 'jenkis.jpg';
+					$short_name = 'REDIS';
+					break;		
+				default:				
 					# code...
 					break;
 			}
@@ -320,6 +336,15 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end and back end support.</p>
 								You can visit this platform by <a href=\"https://www.team-lab.net/\" target=\"_blank\">here</a>";
 				break;
+			case '20170201' :
+				$img_list = array('fuelphp','php','html','css','js','jenkins','lamp','mysql','git','memcached','redis');
+				$img_dom_list = $this->genImgDOM($img_list);
+				$title_name = "Official website";
+				$description = "DMM E-Commerce</p>
+								E-Commerce system for DMM</p>
+								In this project, I was responsibile for back end support.</p>
+								You can visit this platform by <a href=\"https://www.dmm.com/\" target=\"_blank\">here</a>";
+				break;				
 			default:
 				$show_responsibile = false;
 				$title_name = "Oops!";

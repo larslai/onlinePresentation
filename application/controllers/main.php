@@ -415,8 +415,14 @@ class Main extends CI_Controller {
 					'pic'=>'vagrant.jpg',
 					'title'=>'Vagrant',
 					'short_name'=>'Vagrant',
-					'level'=>'FAMILIAR',
+					'level'=>'PROFICIENT',
 					),
+				'Jenkins'=>array(
+					'pic'=>'jenkis.jpg',
+					'title'=>'Jenkins',
+					'short_name'=>'Jenkins',
+					'level'=>'FAMILIAR',
+					),				
 				),
 			);
 		return $skills;
@@ -728,6 +734,18 @@ class Main extends CI_Controller {
 					'read_more'=>true,
 					'need_zoom_in_pic'=>true,
 					),
+				'01/02/2017'=>array(
+					'display'=>true,
+					'ajax_id'=>'20170201',
+					'introduction'=>'Dmm E-commerce',
+					'pic'=>$experience_img_default_size.'/dmm_website.jpg',
+					'full_size_pic'=>'dmm_website.png',
+					'description'=>array(
+						'title'=>'Dmm E-commerce',
+						),
+					'read_more'=>true,
+					'need_zoom_in_pic'=>true,
+					),				
 				),
 			);
 
