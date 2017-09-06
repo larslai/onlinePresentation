@@ -133,7 +133,7 @@ class Ajax extends CI_Controller {
 					$short_name = 'MEMCACHED';
 					break;
 				case 'redis':
-					$pic_name = 'jenkis.jpg';
+					$pic_name = 'redis.png';
 					$short_name = 'REDIS';
 					break;		
 				default:				
@@ -320,7 +320,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for front end support.";
 				break;
 			case '20160801' :
-				$img_list = array('phalcon','php','restful','redmine','lamp','mysql','git');
+				$img_list = array('phalcon','php','restful','redmine','lamp','mysql','git','jenkins');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Passport App Restful API";
 				$description = "Passport App Restful API</p>
@@ -328,7 +328,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for Restful API support.";
 				break;
 			case '20160901' :
-				$img_list = array('phalcon','php','html','css','js','jquery','rwd','redmine','lamp','mysql','git');
+				$img_list = array('phalcon','php','html','css','js','jquery','rwd','redmine','lamp','mysql','git','jenkins');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Official website";
 				$description = "Teamlab official website</p>
