@@ -50,7 +50,7 @@
 			"need_zoom_in_pic":false
 		},
 		"02/06/2013":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20130602",
 			"introduction":"Image website builde",
 			"pic":"md/lee.jpg",
@@ -134,7 +134,7 @@
 			"need_zoom_in_pic":true
 		},
 		"26/07/2014":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20140726",
 			"introduction":"SER Hackathon API platform builde",
 			"pic":"md/ser_api.jpg",
@@ -170,7 +170,7 @@
 			"need_zoom_in_pic":true
 		},
 		"20/01/2015":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20150120",
 			"introduction":"EC analysis system redesign",
 			"pic":"md/ec_analysis_redesign.jpg",
@@ -206,7 +206,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/04/2015":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20150401",
 			"introduction":"Supplier analysis system support",
 			"pic":"md/supplier_analysis_system.jpg",
@@ -254,7 +254,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/01/2016":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20160101",
 			"introduction":"App and product management system",
 			"pic":"md/muji.jpg",
@@ -266,7 +266,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/06/2016":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20160601",
 			"introduction":"Wedding ring website",
 			"pic":"md/vendome.jpg",
