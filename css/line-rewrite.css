@@ -192,7 +192,9 @@ body {
 .timelineFlat .t_left {
     width: 50px;
 }
-
+.arrow-box-right.experience{
+  width: 100%;
+}
 @media (max-width: 767px) {
     .navbar-header {
         padding: 10px;
