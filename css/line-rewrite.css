@@ -1,0 +1,283 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    letter-spacing: 0px;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.line {
+    border: 1px solid;
+}
+
+.sub-hearder-status {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.time-clock {
+    font-size: 1.5em;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.container {
+    top: 100px;
+}
+
+.line-style {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.job-title {
+    padding-top: 15px;
+}
+
+.jumbotron {
+    overflow: auto;
+}
+
+.img-circle {
+    display: block;
+    margin: 0 auto;
+}
+
+.chat-user-pic .img-circle {
+    float: left;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.footer .fa {
+    color: #777;
+}
+
+.navbar-default,
+.navbar-default .fa {
+    background-color: #263047;
+    color: #F7F8F8;
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-default .fa {
+    color: #aeb7b7;
+}
+
+.goback {
+    top: 20px;
+}
+
+.callout-layout {
+    height: auto;
+    overflow: auto;
+    padding: 10px;
+    background: url("../images/line/cloud.png") no-repeat fixed center center/cover transparent;
+    background-color: #7192C1;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.mobile-show {
+    display: none;
+}
+
+.desktop-show {
+    display: block;
+}
+
+.readed {
+    display: inline-block;
+    color: #e6e6e6;
+}
+
+.arrow-box-left,
+.arrow-box-right {
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 30px;
+    display: inline-block;
+    min-height: 30px;
+    padding: 10px;
+    left: 20px;
+    margin-bottom: 30px;
+}
+
+.arrow-box-left {
+    background: #70b835;
+}
+
+.arrow-box-right {
+    background: #f2f2f2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.arrow-box-right .experience {
+    width: 100%;
+}
+
+.arrow-box-left:before,
+.arrow-box-right:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    border: solid 12px transparent;
+}
+
+.arrow-box-left:before {
+    left: -20px;
+    border-right-color: #70b835;
+}
+
+.arrow-box-right:before {
+    right: -20px;
+    border-left-color: #f2f2f2;
+}
+
+.arrow-box-left h2,
+.arrow-box-right h2 {
+    color: black;
+    margin-top: 15px;
+}
+
+
+.featurette-item i {
+    border-color: black;
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+.language-score,
+.language-score-word,
+.country-word {
+    font-size: 1.4em;
+    color: black;
+}
+
+.language-score-word {
+    font-size: 1.3em;
+}
+
+.dark-background {
+    left: 0;
+}
+
+.dynamic-font {
+    color: black;
+}
+
+.detail-style a img {
+    margin: 0;
+}
+
+.timelineFlat .t_right,
+.timelineFlat .t_left {
+    width: 50px;
+}
+
+@media (max-width: 767px) {
+    .navbar-header {
+        padding: 10px;
+        height: 100px;
+    }
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+    .mobile-show {
+        display: block;
+    }
+    .desktop-show {
+        display: none;
+    }
+
+    .arrow-box-left h2,
+    .arrow-box-right h2 {
+        display: block;
+        font-size: 1em;
+    }
+
+    .footer .left-icon,
+    .footer .input,
+    .footer .left-icon div,
+    .footer .right-icon,
+    .footer .right-icon div {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .footer .left-icon {
+        width: 20%;
+    }
+    .footer .input {
+        width: 57%;
+    }
+    .footer .right-icon {
+        width: 20%;
+    }
+    .fa {
+        font-size: 1.2em;
+    }
+    .answer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .readed {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .language-score,
+    .language-score-word,
+    .country-word {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer .left-icon,
+    .footer .right-icon,
+    .chat-user-pic,
+    .timelineFlat.timelineFlatBlog .item .post_date {
+        display: none;
+    }
+    .footer .input {
+        width: 100%;
+    }
+    .arrow-box-left {
+        left: 0;
+    }
+
+    .arrow-box-right.experience {
+        left: -30px;
+        width: 125%;
+    }
+
+  .timelineFlat .item_open, .timelineFlat .item{
+    left: 30px;
+  }
+
+    .show-skill-mobile div {
+        padding: 0;
+    }
+}
