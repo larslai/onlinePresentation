@@ -50,6 +50,11 @@ body {
     margin: 0 auto;
 }
 
+.mobile-show .img-circle {
+    margin: 0;
+}
+
+
 .chat-user-pic .img-circle {
     float: left;
 }
@@ -98,9 +103,9 @@ body {
     display: block;
 }
 
-.readed {
-    display: inline-block;
-    color: #e6e6e6;
+
+.question {
+    padding: 0;
 }
 
 .arrow-box-left,
@@ -112,18 +117,20 @@ body {
     display: inline-block;
     min-height: 30px;
     padding: 10px;
-    left: 20px;
+
     margin-bottom: 30px;
 }
 
 .arrow-box-left {
     background: #70b835;
+    left: 20px;
 }
 
 .arrow-box-right {
     background: #f2f2f2;
     padding-top: 20px;
     padding-bottom: 20px;
+    left: 10px;
 }
 
 .arrow-box-right .experience {
@@ -192,9 +199,11 @@ body {
 .timelineFlat .t_left {
     width: 50px;
 }
-.arrow-box-right.experience{
-  width: 100%;
+
+.arrow-box-right.experience {
+    width: 100%;
 }
+
 @media (max-width: 767px) {
     .navbar-header {
         padding: 10px;
@@ -242,12 +251,6 @@ body {
     }
 }
 
-@media (max-width: 375px) {
-    .readed {
-        display: none;
-    }
-}
-
 @media (max-width: 450px) {
     .language-score,
     .language-score-word,
@@ -256,7 +259,9 @@ body {
     }
 }
 
-@media (max-width: 320px) {
+
+
+@media (max-width: 376px) {
     .footer .left-icon,
     .footer .right-icon,
     .chat-user-pic,
@@ -266,18 +271,22 @@ body {
     .footer .input {
         width: 100%;
     }
+    .question {
+        padding-left: 15px;
+    }
     .arrow-box-left {
-        left: 0;
+        left: -30px;
     }
 
     .arrow-box-right.experience {
-        left: -30px;
-        width: 125%;
+        left: -20px;
+        width: 113%;
     }
 
-  .timelineFlat .item_open, .timelineFlat .item{
-    left: 30px;
-  }
+    .timelineFlat .item_open,
+    .timelineFlat .item {
+        left: 30px;
+    }
 
     .show-skill-mobile div {
         padding: 0;

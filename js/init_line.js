@@ -80,7 +80,7 @@ function initTop(top_data){
 function initBasic(basic_data){
 	var basic_dom = '';
 	$.each( basic_data , function( basic_data_type, data ) {
-		basic_dom += '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">';
+		basic_dom += '<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">';
 		basic_dom += '	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center featurette-item">';
 		basic_dom += '		<i class="fa '+data.icon+'"></i>';
 		basic_dom += '		<div class="black-font"><h4>'+data.title+'</h4></div>';
@@ -89,13 +89,13 @@ function initBasic(basic_data){
 		//language info
 		if( ("language_description" in data ) && !(jQuery.isEmptyObject(data.language_description))){
 			$.each( data.language_description , function( country_id, language_info ) {
-				basic_dom += '<div class="col-xs-12 col-sm-3 col-md-3 col-lg-11 col-lg-offset-1">';
-				basic_dom += '	<div class="col-xs-6 col-sm-12 col-md-12 col-lg-6">';
+				basic_dom += '<div class="col-xs-12 col-sm-3 col-md-12 col-lg-11 col-lg-offset-1">';
+				basic_dom += '	<div class="col-xs-6 col-sm-12 col-md-5 col-lg-6">';
 				basic_dom += '		<div class=" flag-wrapper">';
 				basic_dom += '			<div class="img-thumbnail flag flag-icon-background flag-icon-'+country_id+'"></div>';
 				basic_dom += '		</div>';
 				basic_dom += '	</div>';
-				basic_dom += '	<div class="col-xs-6 col-sm-12 col-md-12 col-lg-6 no-padding">';
+				basic_dom += '	<div class="col-xs-6 col-sm-12 col-md-7 col-lg-6 no-padding">';
 				basic_dom += '		<span class="language-score js-score-animation" data-value="'+language_info.score+'">0%</span>';
 				basic_dom += '	</div>';
 				basic_dom += '</div>';
@@ -103,10 +103,10 @@ function initBasic(basic_data){
 		}else if( ("description" in data ) ){
 			if(basic_data_type == 'country'){
 				basic_dom += '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
-				basic_dom += '	<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4  hidden-xs hidden-lg">';
+				basic_dom += '	<div class="col-xs-6 col-sm-6 col-md-6  hidden-xs hidden-lg">';
 				basic_dom += '		<span class="country-word">'+data.description.title+'</span>';
 				basic_dom += '	</div>';
-				basic_dom += '	<div class="col-xs-6 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-1">';
+				basic_dom += '	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 col-lg-offset-1">';
 				basic_dom += '		<div class="flag-wrapper">';
 				basic_dom += '			<div class="img-thumbnail flag flag-icon-background flag-icon-'+data.description.icon+'"></div>';
 				basic_dom += '		</div>';
