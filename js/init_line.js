@@ -3,17 +3,6 @@ $(document).ready(function () {
 });
 
 function loadJsonFile(){
-/*	
-	//load menu
-	$.getJSON( "json_file/menu.json", function( menu_data ) {
-		initMenu(menu_data);
-	});
-
-	//load top
-	$.getJSON( "json_file/top.json", function( top_data ) {
-		initTop(top_data);
-	});
-*/
 	//load basic
 	$.getJSON( "line_json_file/basic.json", function( basic_data ) {
 		initBasic(basic_data);
@@ -31,50 +20,6 @@ function loadJsonFile(){
 		experience_data = filterExperience(experience_row_data , newest_experience_first);
 		initExperience(experience_data);
 	});
-/*
-	//load contact
-	$.getJSON( "json_file/contact.json", function( contact_data ) {
-		initContact(contact_data);
-	});
-
-	//load footer
-	$.getJSON( "json_file/footer.json", function( footer_data ) {
-		initFooter(footer_data);
-	});
-*/	
-}
-
-function initMenu(menu_data){
-	var menu_li_dom = "";
-	$.each( menu_data , function( sec_id, data ) {
-		if(data.display == false){
-			$('#'+sec_id).remove();
-		}else{
-			menu_li_dom += '<li><a class="go-to-sec" href="#'+sec_id+'">'+data.title+'</a></li>';
-		}
-    });
-    $('#nav').append(menu_li_dom);
-    return;
-}
-
-function initTop(top_data){
-	$('.js-top-name').html("THIS IS ME,&nbsp;"+top_data.name);
-	$('.lead').html(top_data.description);
-	$('.mypic-sm').attr("src", top_data.pic);
-
-	$(".write-typing-effect").typed({
-		strings: ["<h1>THIS IS ME,&nbsp;"+top_data.name+"</h1><p class='lead'>"+top_data.description+"</p>"],
-		typeSpeed: 30,
-		backDelay: 500,
-		showCursor:false,
-		loop: false,
-		contentType: 'html', // or text
-		// defaults to false for infinite loop
-		loopCount: false,
-    });
-
-	// Pretty simple huh?
-	var parallax = new Parallax($('#my_picture')[0]);
 }
 
 function initBasic(basic_data){
@@ -396,25 +341,4 @@ function initExperience(experience_data){
 			theme:"light-thin"
 		});
 	});
-}
-
-
-function initContact(contact_data){
-	$('.js-linkdin-link').attr("href", contact_data.linkedin);
-	$('.js-facebook-link').attr("href", contact_data.facebook);
-}
-
-function initFooter(footer){
-	var footer_dom = 'Built with<i class="icon-heart-empty"></i> at ';
-	if(footer.link != null){
-		footer_dom += '<a href="'+footer.link+'">'+footer.builder+'</a>.';
-	}else{
-		footer_dom += '<a href="javascript:void(0);">'+footer.builder+'</a>.';
-	}
-
-	footer_dom += '<br>'+footer.email;
-	footer_dom += '<br>'+footer.title;
-	footer_dom += '©copy right-'+footer.start_time+'-'+(new Date).getFullYear();
-	$('#footer_info').html(footer_dom);
-	return;
 }

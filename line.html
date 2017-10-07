@@ -97,7 +97,7 @@
         </nav>
         <div class="callout">
             <div class="callout-layout">
-                <div class="container-fluid">
+                <div class="container-fluid" id="message_section">
                     <div class="col-sm-12 col-md-12 col-lg-12" id="sec1">
                         <div class="col-sm-12 col-md-12 col-lg-12 text-left question">
                             <div class="chat-user-pic">
@@ -151,18 +151,18 @@
         <div class="col-sm-12 col-md-12 col-lg-12 footer navbar-fixed-bottom">
             <div class="col-sm-2 col-md-2 col-lg-2 text-center left-icon">
                 <div class="col-sm-6 col-md-6 col-lg-6 text-center">
-                    <a href="#"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
+                    <a id="add_file" href="javascript:void(0);"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 text-center">
-                    <a href="#"><i class="fa fa-smile-o fa-2x" aria-hidden="true"></i></a>
+                    <a id="leave_image_msg" href="javascript:void(0);"><i class="fa fa-smile-o fa-2x" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8 input">
-                <input type="text" class="form-control" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" id="leave_message">
             </div>
             <div class="col-sm-2 col-md-2 col-lg-2 text-center right-icon">
                 <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                    <a href="#"><i class="fa fa-microphone fa-2x" aria-hidden="true"></i></a>
+                    <a id="leave_recording_msg" href="javascript:void(0);"><i class="fa fa-microphone fa-2x" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -198,6 +198,84 @@
             $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top - 110 }, 500);
             return false;
         });
+
+        $('#add_file').click(function(e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: $(document).height() }, 500);
+            var msg = '???'; 
+            interviewer_response(msg);
+            
+            $('#message_section').append(dom);
+            return false;
+        })
+
+        $('#leave_image_msg').click(function(e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: $(document).height() }, 500);
+
+            var dom = '';
+            dom += '<div class="col-sm-12 col-md-12 col-lg-12" id="sec4">';
+            dom += '  <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-2 text-right answer ">';
+            dom += '    <div class="arrow-box-right image-msg">';
+            dom += '      <img src="images/line/hello.png">';
+            dom += '    </div>';
+            dom += '  </div>';
+            dom += '</div>';
+            $('#message_section').append(dom);
+            return false;
+        })
+
+        $('#leave_recording_msg').click(function(e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: $(document).height() }, 500);
+
+            var msg = 'Please don\'t use voice msg when interview.'; 
+            interviewer_response(msg);
+            
+            $('#message_section').append(dom);
+            return false;
+        })    
+
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+                e.preventDefault();
+                var msg = $('#leave_message').val();
+                if(msg != ''){
+                    $("html, body").animate({ scrollTop: $(document).height() }, 500);
+
+                    var dom = '';
+                    dom += '<div class="col-sm-12 col-md-12 col-lg-12" id="sec4">';
+                    dom += '  <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-2 text-right answer ">';
+                    dom += '    <div class="arrow-box-right">';
+                    dom += '      <h2>'+msg+'</h2>';
+                    dom += '    </div>';
+                    dom += '  </div>';
+                    dom += '</div>';
+                    $('#message_section').append(dom);
+                    $('#leave_message').val('');
+
+                    var msg = '.....'; 
+                    setTimeout(interviewer_response,1000,msg);
+                    return false;
+                }
+            }
+        })
+
+        function interviewer_response(msg){
+            $("html, body").animate({ scrollTop: $(document).height() }, 500);
+
+            var dom = '';
+            dom += '<div class="col-sm-12 col-md-12 col-lg-12 text-left question">';
+            dom += '  <div class="chat-user-pic">';
+            dom += '    <img class="img-circle xs-size" src="images/line/interviewer.png">';
+            dom += '  </div>';
+            dom += '  <div class="arrow-box-left">';
+            dom += '    <h2>'+msg+'</h2>';
+            dom += '  </div>';
+            dom += '</div>';
+
+            $('#message_section').append(dom);
+        }
 
         $('#go_top').click(function(e) {
             e.preventDefault();

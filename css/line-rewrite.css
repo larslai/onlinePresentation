@@ -162,7 +162,12 @@ body {
     margin-top: 15px;
 }
 
-
+.arrow-box-right.image-msg{
+  background:none;
+}
+.arrow-box-right.image-msg:before{
+  border:none;
+}
 .featurette-item i {
     border-color: black;
     font-size: 40px;
