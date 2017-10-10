@@ -195,7 +195,7 @@ function initSkill(skill_data){
 		skill_dom += '		</div>';
 		skill_dom += '	</div>';
 		skill_dom += '</div>';
-		skill_dom += '<div class="col-sm-12 col-md-12 col-lg-9 col-lg-offset-3 text-right answer">';
+		skill_dom += '<div class="col-sm-12 col-md-10 col-md-offset-2 col-lg-9 col-lg-offset-3 text-right answer">';
         skill_dom += '  <div class="arrow-box-right">'
 		skill_dom += '		<div class="row hidden-xs">';
 		$.each( skill_info_order , function( index, skill_info ) {
