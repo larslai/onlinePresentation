@@ -293,7 +293,7 @@ body {
         left: 30px;
     }
     .timelineFlat .item_open_cwrapper{
-      width: 260px;
+      padding-right: 40px;
     }
     .timelineFlat .item_open .t_close{
       right: 50px;
