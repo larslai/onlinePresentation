@@ -297,6 +297,7 @@ body {
     }
     .timelineFlat .item_open .t_close{
       right: 85px;
+      top:6px;
     }
     .show-skill-mobile div {
         padding: 0;
