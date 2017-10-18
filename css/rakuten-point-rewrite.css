@@ -1,0 +1,276 @@
+h1,
+h2,
+h3,
+h4,
+span {
+
+    font-family: "Mplus 1p", Arial, sans-serif;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #788787;
+}
+
+body {
+    padding-top: 100px;
+    background-color: #ededed;
+
+}
+.padding-top-7{
+    padding-top: 7px;
+}
+.padding-top-15{
+    padding-top: 15px;
+}
+.rakuten-logo {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: -5px;
+}
+
+.sub-hearder-status {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.time-clock {
+    font-size: 1.5em;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.container {
+    top: 100px;
+}
+
+.line-style {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.logo-description {
+    display: inline-block;
+}
+
+.jumbotron {
+    overflow: auto;
+}
+
+.img-circle {
+    display: block;
+    margin: 0 auto;
+}
+
+.mobile-show .img-circle {
+    margin: 0;
+}
+
+
+.chat-user-pic .img-circle {
+    float: left;
+}
+
+.padding-5{
+    padding: 5px;
+}
+
+.navbar-default,
+.navbar-default .fa {
+    background-color: #FFF;
+    color: #788787;
+    border: 0;
+    border-radius: 0;
+    
+}
+.buttom-line{
+    border-bottom: 1px solid #788787;
+}
+.buttom-line.gray{
+    border-bottom: 1px solid #ededed;
+}
+.right-line{
+    border-right: 1px solid #788787;
+}
+.navbar-default .fa {
+    color: #788787;
+}
+.section{
+    color: #e5666b;
+    
+}
+.section .fa{
+    color: #BF2026;
+
+}
+.navbar-toggle{
+    float: none;
+    border: none;
+}
+.no-padding{
+    padding:0;
+}
+.callout{
+    position: relative;
+    top: 80px;
+}
+.callout-layout {
+    height: auto;
+    overflow: auto;
+    padding: 10px;
+    background: url("");
+    background-color: #EAEAEA;
+    color: black;
+}
+
+.mobile-show {
+    display: none;
+}
+
+.desktop-show {
+    display: inline-block;
+}
+.information-block{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    padding: 10px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+
+.featurette-item i {
+    border-color: black;
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+.language-score,
+.language-score-word,
+.country-word {
+    font-size: 1.4em;
+    color: black;
+}
+
+.language-score-word {
+    font-size: 1.3em;
+}
+
+.dark-background {
+    left: 0;
+}
+
+.detail-style a img {
+    margin: 0;
+}
+
+.timelineFlat .t_right,
+.timelineFlat .t_left {
+    width: 50px;
+}
+
+.id-barcode i{
+    font-size: 9em;
+    color: #788787;
+}
+.creditcard-icon{
+    position: relative;
+    top: 5px;
+}
+.creditcard-icon i{
+    color: #788787;
+}
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+.use-point div i ,.setting div i{
+    position: relative;
+    top: 7px;
+    color: #788787;
+}
+@media (max-width: 1100px) {
+    .timelineFlat .item_open .t_close{
+      right: 85px;
+      top:6px;
+    }  
+}
+
+@media (max-width: 910px) {
+    .use-point div h4 ,.setting div h4{
+        font-size: 1em;
+    } 
+}
+@media (max-width: 767px) {
+    .navbar-header {
+        padding: 10px;
+        height: 80px;
+    }
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+    .mobile-show {
+        display: block;
+    }
+    .desktop-show {
+        display: none;
+    }
+    .rakuten-logo {
+        top:0;
+    }
+    .logo-description {
+        font-size: 1em;
+    }
+}
+@media (max-width: 650px) {
+    .id-barcode i{
+        font-size: 5.5em;
+    }
+    .callout{
+        top: 30px;
+    }
+}
+@media (max-width: 450px) {
+    .language-score,
+    .language-score-word,
+    .country-word {
+        font-size: 1.2em;
+    }
+    .id-barcode i{
+        font-size: 4.5em;
+    }   
+    .go-to-sec .fa{
+        font-size: 3em;
+    } 
+}
+
+
+
+@media (max-width: 376px) {
+    .chat-user-pic,
+    .timelineFlat.timelineFlatBlog .item .post_date {
+        display: none;
+    }
+
+    .timelineFlat .item_open,
+    .timelineFlat .item {
+        left: 30px;
+    }
+    .timelineFlat .item_open_cwrapper{
+      padding-right: 40px;
+    }
+    .show-skill-mobile div {
+        padding: 0;
+    }
+    .id-barcode i{
+        font-size: 3em;
+    }     
+    .use-point div i ,.setting div i{
+        top: 3px;
+    }    
+}

@@ -1,0 +1,317 @@
+{
+	"start_time":"",
+	"data":{
+		"30/08/2012":{
+			"display":true,
+			"ajax_id":"20120830",
+			"introduction":"Multinational EC system builde",
+			"pic":"md/multinational_EC_system.jpg",
+			"full_size_pic":"multinational_EC_system.jpg",
+			"description":{
+			"title":"Multinational EC system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"03/09/2012":{
+			"display":true,
+			"ajax_id":"20120903",
+			"introduction":"Virtual currency builde",
+			"pic":"md/virtual_currency.jpg",
+			"full_size_pic":"virtual_currency.jpg",
+			"description":{
+				"title":"Virtual currency builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"15/09/2012":{
+			"display":true,
+			"ajax_id":"20120915",
+			"introduction":"Financial management system support",
+			"pic":"md/financial_management.jpg",
+			"full_size_pic":"financial_management.png",
+			"description":{
+				"title":"Financial management system support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"17/12/2012":{
+			"display":true,
+			"ajax_id":"20121217",
+			"introduction":"OTP system design",
+			"pic":"md/otp.jpg",
+			"description":{
+				"title":"OTP system design",
+				"sub_title":"Use PHP to design one time password system to increase security of management system.<\br> Responsible for php coding in this project."
+			},
+			"read_more":false,
+			"need_zoom_in_pic":false
+		},
+		"02/06/2013":{
+			"display":false,
+			"ajax_id":"20130602",
+			"introduction":"Image website builde",
+			"pic":"md/lee.jpg",
+			"full_size_pic":"lee.jpg",
+			"description":{
+				"title":"Image website builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"10/08/2013":{
+			"display":false,
+			"ajax_id":"20130810",
+			"introduction":"Inventory Management system builde",
+			"pic":"md/inventory_management.jpg",
+			"full_size_pic":"inventory_management.jpg",
+			"description":{
+				"title":"Inventory Management system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/11/2013":{
+			"display":true,
+			"ajax_id":"20131120",
+			"introduction":"Social relationship management system support",
+			"pic":"md/srm.jpg",
+			"full_size_pic":"srm.png",
+			"read_more":true,
+			"description":{
+				"title":"SRM system support"
+			},
+			"need_zoom_in_pic":true
+		},
+		"01/01/2014":{
+			"display":true,
+			"ajax_id":"20140101",
+			"introduction":"EC analysis system builde",
+			"pic":"md/ec_analysis.jpg",
+			"full_size_pic":"ec_analysis.jpg",
+			"description":{
+				"title":"EC analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"15/01/2014":{
+			"display":false,
+			"ajax_id":"20140115",
+			"introduction":"Data analysis system builde",
+			"pic":"md/indexasia.jpg",
+			"full_size_pic":"indexasia.png",
+			"description":{
+				"title":"Data analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"22/03/2014":{
+			"display":true,
+			"ajax_id":"20140322",
+			"introduction":"Pixnet hackathon participating",
+			"pic":"md/pixnet.jpg",
+			"description":{
+				"title":"Pixnet hackathon participating",
+				"sub_title":"Design multi keyword search engine by open data that Pixnet providing.<\br> Responsible for php coding and front end support in this project."
+			},
+			"read_more":false,
+			"need_zoom_in_pic":false
+		},
+		"15/06/2014":{
+			"display":true,
+			"ajax_id":"20140615",
+			"introduction":"Taipeicity social data system builde",
+			"pic":"md/taipeicity_social.jpg",
+			"full_size_pic":"taipeicity_social.png",
+			"description":{
+				"title":"Taipeicity social data system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"26/07/2014":{
+			"display":false,
+			"ajax_id":"20140726",
+			"introduction":"SER Hackathon API platform builde",
+			"pic":"md/ser_api.jpg",
+			"full_size_pic":"ser_api.png",
+			"description":{
+				"title":"SER Hackathon API platform builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"30/08/2014":{
+			"display":false,
+			"ajax_id":"20140830",
+			"introduction":"SER API platform redesign",
+			"pic":"md/ser_api_redesign.jpg",
+			"full_size_pic":"ser_api_redesign.png",
+			"description":{
+				"title":"SER API platform redesign"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"13/12/2014":{
+			"display":true,
+			"ajax_id":"20141213",
+			"introduction":"Instore analysis system builde",
+			"pic":"md/hot_spot.jpg",
+			"full_size_pic":"hot_spot.jpg",
+			"description":{
+				"title":"Instore analysis system builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/01/2015":{
+			"display":false,
+			"ajax_id":"20150120",
+			"introduction":"EC analysis system redesign",
+			"pic":"md/ec_analysis_redesign.jpg",
+			"full_size_pic":"ec_analysis_redesign.jpg",
+			"description":{
+				"title":"EC analysis system redesign"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"29/01/2015":{
+			"display":true,
+			"ajax_id":"20150129",
+			"introduction":"Personal websibe builde",
+			"pic":"md/my_website.jpg",
+			"full_size_pic":"my_website.png",
+			"description":{
+				"title":"Personal websibe builde"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"25/02/2015":{
+			"display":false,
+			"ajax_id":"20150225",
+			"introduction":"Rss assistance system",
+			"pic":"md/rss_post_assistance.jpg",
+			"full_size_pic":"rss_post_assistance.png",
+			"description":{
+				"title":"Rss assistance system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/04/2015":{
+			"display":false,
+			"ajax_id":"20150401",
+			"introduction":"Supplier analysis system support",
+			"pic":"md/supplier_analysis_system.jpg",
+			"full_size_pic":"supplier_analysis_system.jpg",
+			"description":{
+				"title":"Supplier analysis system support"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"10/04/2015":{
+			"display":true,
+			"ajax_id":"20150410",
+			"introduction":"FB App analysis system",
+			"pic":"md/FB_app_analysis_system.jpg",
+			"full_size_pic":"FB_app_analysis_system.jpg",
+			"description":{
+				"title":"FB App analysis system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"20/05/2015":{
+			"display":true,
+			"ajax_id":"20150520",
+			"introduction":"FB user behavior system",
+			"pic":"md/FB_user_behavior_system.jpg",
+			"full_size_pic":"FB_user_behavior_system.jpg",
+			"description":{
+				"title":"FB user behavior system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/10/2015":{
+			"display":true,
+			"ajax_id":"20151001",
+			"introduction":"Hybrid FB post App",
+			"pic":"md/matome.jpg",
+			"full_size_pic":"matome.png",
+			"description":{
+				"title":"Hybrid FB post App"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/01/2016":{
+			"display":true,
+			"ajax_id":"20160101",
+			"introduction":"App and product management system",
+			"pic":"md/muji.jpg",
+			"full_size_pic":"muji.png",
+			"description":{
+				"title":"App and product management system"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/06/2016":{
+			"display":false,
+			"ajax_id":"20160601",
+			"introduction":"Wedding ring website",
+			"pic":"md/vendome.jpg",
+			"full_size_pic":"vendome.png",
+			"description":{
+				"title":"Wedding ring website"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/08/2016":{
+			"display":true,
+			"ajax_id":"20160801",
+			"introduction":"Passport App Restful API",
+			"pic":"md/passport.jpg",
+			"full_size_pic":"passport.png",
+			"description":{
+				"title":"Passport App Restful API"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/09/2016":{
+			"display":true,
+			"ajax_id":"20160901",
+			"introduction":"Teamlab official website",
+			"pic":"md/dotnet.jpg",
+			"full_size_pic":"dotnet.png",
+			"description":{
+				"title":"Teamlab official website"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},
+		"01/02/2017":{
+			"display":true,
+			"ajax_id":"20170201",
+			"introduction":"DMM E-commerce",
+			"pic":"md/dmm_website.jpg",
+			"full_size_pic":"dmm_website.png",
+			"description":{
+				"title":"DMM official website"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		}		
+	}
+}
