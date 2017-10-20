@@ -195,6 +195,12 @@
 			"title":"JENKINS",
 			"short_name":"JENKINS",
 			"level":"FAMILIAR"
+		},
+		"ECLIPSE":{
+			"pic":"eclipse.png",
+			"title":"ECLIPSE",
+			"short_name":"ECLIPSE",
+			"level":"FAMILIAR"
 		}
 	}
 }
