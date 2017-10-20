@@ -56,6 +56,18 @@
 			"short_name":"PHP",
 			"level":"MASTER"
 		},
+		"JAVA":{
+			"pic":"java.png",
+			"title":"JAVA",
+			"short_name":"JAVA",
+			"level":"FAMILIAR"
+		},
+		"PYTHON":{
+			"pic":"python.png",
+			"title":"PYTHON",
+			"short_name":"PYTHON",
+			"level":"FAMILIAR"
+		},		
 		"CI":{
 			"pic":"ci.jpg",
 			"title":"codeigniter",
