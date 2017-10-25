@@ -9,7 +9,12 @@ span {
     letter-spacing: 0px;
     color: #788787;
 }
-
+.timelineFlat .item span{
+    color: #FFF;   
+}
+.menu-title span{
+    color: #BF2026;
+}
 body {
     padding-top: 100px;
     background-color: #ededed;
