@@ -269,6 +269,18 @@ class Main extends CI_Controller {
 					'short_name'=>'CSS',
 					'level'=>'MASTER',
 					),
+				'Bootstrap'=>array(
+					'pic'=>'bootstrap.png',
+					'title'=>'Bootstrap',
+					'short_name'=>'Bootstrap',
+					'level'=>'Master',
+					),
+				'SASS'=>array(
+					'pic'=>'sass.jpg',
+					'title'=>'SASS',
+					'short_name'=>'SASS',
+					'level'=>'PROFICIENT',
+					),
 				),
 			'back-end'=>array(
 				'LAMP'=>array(
@@ -355,14 +367,26 @@ class Main extends CI_Controller {
 					'short_name'=>'Redis',
 					'level'=>'FAMILIAR',
 					),
-				),
-			'tools'=>array(
-				'Bootstrap'=>array(
-					'pic'=>'bootstrap.png',
-					'title'=>'Bootstrap',
-					'short_name'=>'Bootstrap',
-					'level'=>'Master',
+				'JAVA'=>array(
+					'pic'=>'java.png',
+					'title'=>'Java',
+					'short_name'=>'java',
+					'level'=>'FAMILIAR',
 					),
+				'Spring'=>array(
+					'pic'=>'spring.png',
+					'title'=>'Spring',
+					'short_name'=>'Spring',
+					'level'=>'FAMILIAR',
+					),
+				'Python'=>array(
+					'pic'=>'python.png',
+					'title'=>'Python',
+					'short_name'=>'Python',
+					'level'=>'FAMILIAR',
+					),
+				),
+			'tools'=>array(				
 				'Git'=>array(
 					'pic'=>'git.png',
 					'title'=>'Git',
@@ -379,12 +403,6 @@ class Main extends CI_Controller {
 					'pic'=>'FBSDK.png',
 					'title'=>'FB dvelopers',
 					'short_name'=>'FB SDK',
-					'level'=>'PROFICIENT',
-					),
-				'SASS'=>array(
-					'pic'=>'sass.jpg',
-					'title'=>'SASS',
-					'short_name'=>'SASS',
 					'level'=>'PROFICIENT',
 					),
 				'Flash'=>array(
