@@ -29,7 +29,19 @@
 			"title":"CSS",
 			"short_name":"CSS",
 			"level":"MASTER"
-		}
+		},
+		"Bootstrap":{
+			"pic":"bootstrap.png",
+			"title":"Bootstrap",
+			"short_name":"Bootstrap",
+			"level":"MASTER"
+		},
+		"SASS":{
+			"pic":"sass.jpg",
+			"title":"SASS",
+			"short_name":"SASS",
+			"level":"PROFICIENT"
+		}		
 	},
 	"back-end":{
 		"LAMP":{
@@ -135,13 +147,7 @@
 			"level":"FAMILIAR"
 		}
 	},
-	"tools":{
-		"Bootstrap":{
-			"pic":"bootstrap.png",
-			"title":"Bootstrap",
-			"short_name":"Bootstrap",
-			"level":"MASTER"
-		},
+	"tools":{		
 		"Git":{
 			"pic":"git.png",
 			"title":"Git",
@@ -158,12 +164,6 @@
 			"pic":"FBSDK.png",
 			"title":"FB dvelopers",
 			"short_name":"FB SDK",
-			"level":"PROFICIENT"
-		},
-		"SASS":{
-			"pic":"sass.jpg",
-			"title":"SASS",
-			"short_name":"SASS",
 			"level":"PROFICIENT"
 		},
 		"Flash":{
