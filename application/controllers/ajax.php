@@ -135,7 +135,19 @@ class Ajax extends CI_Controller {
 				case 'redis':
 					$pic_name = 'redis.png';
 					$short_name = 'REDIS';
-					break;		
+					break;	
+				case 'java':
+					$pic_name = 'java.png';
+					$short_name = 'JAVA';
+					break;	
+				case 'spring':
+					$pic_name = 'spring.png';
+					$short_name = 'SPRING';
+					break;	
+				case 'python':
+					$pic_name = 'python.png';
+					$short_name = 'PYTHON';
+					break;					
 				default:				
 					# code...
 					break;
@@ -161,7 +173,7 @@ class Ajax extends CI_Controller {
 
 			//1st from the left
 			case '20120830' :
-				$img_list = array('yii','php','html','css','js','jquery','lamp','mysql','git');
+				$img_list = array('spring','java','html','css','js','jquery','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Multinational EC system builde";
 				$description = "To develop the functional multinational EC system for CPA advertising.</p>
@@ -169,7 +181,7 @@ class Ajax extends CI_Controller {
 								You can visit this platform by <a href=\"http://pub.offerme2.com/\" target=\"_blank\">here</a>";
 				break;
 			case '20120903' :
-				$img_list = array('yii','php','html','css','js','jquery','lamp','mysql','git');
+				$img_list = array('spring','java','html','css','js','jquery','lamp','mysql','git');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Virtual currency builde";
 				$description = "To develop virtual currency for CPA advertising platform.</p>
@@ -199,14 +211,14 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for PM, team leader and coding support.";
 				break;
 			case '20131120' :
-				$img_list = array('ci','php','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
+				$img_list = array('spring','java','python','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "SRM system support";
 				$description = "To develop social relationship management system in order to analysis big data of social platform.</p>
 								In this project, I was responsibile for front end and back end coding.";
 				break;
 			case '20140101' :
-				$img_list = array('ci','php','restful','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
+				$img_list = array('ci','php','python','restful','html','css','js','jquery','lamp','mysql','git','bootstrap','rwd','solr');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "E-Commerce analysis system builde";
 				$description = "To develop electronic commerce analysis system in order to analysis big data of online multinational electronic commerce.</p>
@@ -328,7 +340,7 @@ class Ajax extends CI_Controller {
 								In this project, I was responsibile for Restful API support.";
 				break;
 			case '20160901' :
-				$img_list = array('phalcon','php','html','css','js','jquery','rwd','redmine','lamp','mysql','git','jenkins');
+				$img_list = array('spring','java','html','css','js','jquery','rwd','redmine','lamp','mysql','git','jenkins');
 				$img_dom_list = $this->genImgDOM($img_list);
 				$title_name = "Official website";
 				$description = "Teamlab official website</p>
