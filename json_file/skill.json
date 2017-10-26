@@ -50,6 +50,12 @@
 			"short_name":"JAVA",
 			"level":"FAMILIAR"
 		},
+		"SPRING":{
+			"pic":"spring.png",
+			"title":"SPRING",
+			"short_name":"SPRING",
+			"level":"FAMILIAR"
+		},		
 		"PYTHON":{
 			"pic":"python.png",
 			"title":"PYTHON",
