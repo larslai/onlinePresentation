@@ -1,8 +1,20 @@
 {
 	"start_time":"",
 	"data":{
-		"30/08/2012":{
+		"01/06/2012":{
 			"display":true,
+			"ajax_id":"20120601",
+			"introduction":"Online music share system",
+			"pic":"md/streetvoice.png",
+			"full_size_pic":"streetvoice.png",
+			"description":{
+			"title":"Online music plateform"
+			},
+			"read_more":true,
+			"need_zoom_in_pic":true
+		},		
+		"30/08/2012":{
+			"display":false,
 			"ajax_id":"20120830",
 			"introduction":"Multinational EC system builde",
 			"pic":"md/multinational_EC_system.jpg",
@@ -14,7 +26,7 @@
 			"need_zoom_in_pic":true
 		},
 		"03/09/2012":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20120903",
 			"introduction":"Virtual currency builde",
 			"pic":"md/virtual_currency.jpg",
@@ -26,7 +38,7 @@
 			"need_zoom_in_pic":true
 		},
 		"15/09/2012":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20120915",
 			"introduction":"Financial management system support",
 			"pic":"md/financial_management.jpg",
@@ -74,7 +86,7 @@
 			"need_zoom_in_pic":true
 		},
 		"20/11/2013":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20131120",
 			"introduction":"Social relationship management system support",
 			"pic":"md/srm.jpg",
@@ -112,11 +124,11 @@
 		"22/03/2014":{
 			"display":true,
 			"ajax_id":"20140322",
-			"introduction":"Pixnet hackathon participating",
+			"introduction":"Yahoo hackathon participating",
 			"pic":"md/pixnet.jpg",
 			"description":{
-				"title":"Pixnet hackathon participating",
-				"sub_title":"Design multi keyword search engine by open data that Pixnet providing.<\br> Responsible for php coding and front end support in this project."
+				"title":"Yahoo hackathon participating",
+				"sub_title":"Design multi keyword search engine by open data that Yahoo providing.</br> Responsible for php coding and front end support in this project."
 			},
 			"read_more":false,
 			"need_zoom_in_pic":false
@@ -146,7 +158,7 @@
 			"need_zoom_in_pic":true
 		},
 		"30/08/2014":{
-			"display":false,
+			"display":true,
 			"ajax_id":"20140830",
 			"introduction":"SER API platform redesign",
 			"pic":"md/ser_api_redesign.jpg",
@@ -182,7 +194,7 @@
 			"need_zoom_in_pic":true
 		},
 		"29/01/2015":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20150129",
 			"introduction":"Personal websibe builde",
 			"pic":"md/my_website.jpg",
@@ -218,7 +230,7 @@
 			"need_zoom_in_pic":true
 		},
 		"10/04/2015":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20150410",
 			"introduction":"FB App analysis system",
 			"pic":"md/FB_app_analysis_system.jpg",
@@ -230,7 +242,7 @@
 			"need_zoom_in_pic":true
 		},
 		"20/05/2015":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20150520",
 			"introduction":"FB user behavior system",
 			"pic":"md/FB_user_behavior_system.jpg",
@@ -254,7 +266,7 @@
 			"need_zoom_in_pic":true
 		},
 		"01/01/2016":{
-			"display":true,
+			"display":false,
 			"ajax_id":"20160101",
 			"introduction":"App and product management system",
 			"pic":"md/muji.jpg",
