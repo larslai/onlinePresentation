@@ -41,15 +41,15 @@
 			},
 			"cn":{
 				"score":85,
-				"lv":"upper-intermediate"
+				"lv":"nature"
 			},
 			"gb":{
 				"score":70,
 				"lv":"intermediate"
 			},
 			"jp":{
-				"score":45,
-				"lv":"N3"
+				"score":70,
+				"lv":"N2"
 			}
 		}
 	}
