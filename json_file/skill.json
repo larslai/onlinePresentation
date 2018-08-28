@@ -142,6 +142,12 @@
 			"short_name":"PHALCON",
 			"level":"EXPERT"
 		},
+		"Go":{
+			"pic":"golang.png",
+			"title":"Go",
+			"short_name":"Go",
+			"level":"FAMILIAR"
+		},
 		"MySQL":{
 			"pic":"mysql.png",
 			"title":"MYSQL",
