@@ -170,7 +170,7 @@ class Main extends CI_Controller {
 		$top = array(
 			'pic'=>'my_picture/me.jpg',
 			'name'=>'lars',
-			'description'=>'The UX,<br> Project planner,<br> FullStack Engineer & Ethereum ICO developer',
+			'description'=>'The UX,<br> Project planner,<br> FullStack Engineer & Ethereum Smart Contract Developer',
 		);
 		return $top;
 	}
@@ -238,6 +238,56 @@ class Main extends CI_Controller {
 
 	private function getSkillsInfo(){
 		$skills = array(
+			'cryptocurrency' => array(
+				'SOLIDITY'=>array(
+					'pic'=>'solidity.png',
+					'title'=>'SOLIDITY',
+					'short_name'=>'Solidity',
+					'level'=>'EXPERT',
+					),
+				'TRUFFLE'=>array(
+					'pic'=>'truffle.jpg',
+					'title'=>'TRUFFLE',
+					'short_name'=>'Truffle',
+					'level'=>'EXPERT',
+					),
+				'OPENZEPPELIN'=>array(
+					'pic'=>'openzeppelin.png',
+					'title'=>'OPENZEPPELIN',
+					'short_name'=>'OpenZeppelin',
+					'level'=>'EXPERT',
+					),
+				'WEB3JS'=>array(
+					'pic'=>'web3js.png',
+					'title'=>'WEB3JS',
+					'short_name'=>'Web3JS',
+					'level'=>'PROFICIENT',
+					),
+				'GETH'=>array(
+					'pic'=>'goethereum.png',
+					'title'=>'GETH',
+					'short_name'=>'Geth',
+					'level'=>'PROFICIENT',
+					),
+				'GANACHE'=>array(
+					'pic'=>'ganache.png',
+					'title'=>'GANACHE',
+					'short_name'=>'Ganache',
+					'level'=>'EXPERT',
+					),
+				'METAMASK'=>array(
+					'pic'=>'metamask.jpg',
+					'title'=>'METAMASK',
+					'short_name'=>'Metamask',
+					'level'=>'EXPERT',
+					),
+				'INFURA'=>array(
+					'pic'=>'infura.jpg',
+					'title'=>'INFURA',
+					'short_name'=>'Infura',
+					'level'=>'EXPERT',
+					)
+				),
 			'front-end'=>array(
 				'RWD_design'=>array(
 					'pic'=>'rwd.png',
@@ -385,6 +435,12 @@ class Main extends CI_Controller {
 					'short_name'=>'Python',
 					'level'=>'FAMILIAR',
 					),
+				'Go'=>array(
+					'pic'=>'golang.png',
+					'title'=>'Go',
+					'short_name'=>'Go',
+					'level'=>'FAMILIAR',
+					),
 				),
 			'tools'=>array(				
 				'Git'=>array(
@@ -441,56 +497,6 @@ class Main extends CI_Controller {
 					'short_name'=>'Jenkins',
 					'level'=>'FAMILIAR',
 					),				
-				),
-			'cryptocurrency' => array(
-				'SOLIDITY'=>array(
-					'pic'=>'solidity.png',
-					'title'=>'SOLIDITY',
-					'short_name'=>'Solidity',
-					'level'=>'EXPERT',
-					),
-				'TRUFFLE'=>array(
-					'pic'=>'truffle.jpg',
-					'title'=>'TRUFFLE',
-					'short_name'=>'Truffle',
-					'level'=>'EXPERT',
-					),
-				'OPENZEPPELIN'=>array(
-					'pic'=>'openzeppelin.png',
-					'title'=>'OPENZEPPELIN',
-					'short_name'=>'OpenZeppelin',
-					'level'=>'EXPERT',
-					),
-				'WEB3JS'=>array(
-					'pic'=>'web3js.png',
-					'title'=>'WEB3JS',
-					'short_name'=>'Web3JS',
-					'level'=>'PROFICIENT',
-					),
-				'GETH'=>array(
-					'pic'=>'goethereum.png',
-					'title'=>'GETH',
-					'short_name'=>'Geth',
-					'level'=>'PROFICIENT',
-					),
-				'GANACHE'=>array(
-					'pic'=>'ganache.png',
-					'title'=>'GANACHE',
-					'short_name'=>'Ganache',
-					'level'=>'EXPERT',
-					),
-				'METAMASK'=>array(
-					'pic'=>'metamask.jpg',
-					'title'=>'METAMASK',
-					'short_name'=>'Metamask',
-					'level'=>'EXPERT',
-					),
-				'INFURA'=>array(
-					'pic'=>'infura.jpg',
-					'title'=>'INFURA',
-					'short_name'=>'Infura',
-					'level'=>'EXPERT',
-					)
 				)
 			);
 		return $skills;
