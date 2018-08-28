@@ -1,4 +1,54 @@
 {
+	"cryptocurrency":{
+		"SOLIDITY":{
+			"pic":"solidity.png",
+			"title":"SOLIDITY",
+			"short_name":"Solidity",
+			"level":"EXPERT"
+		},
+		"TRUFFLE":{
+			"pic":"truffle.jpg",
+			"title":"TRUFFLE",
+			"short_name":"Truffle",
+			"level":"EXPERT"
+		},		
+		"OPENZEPPELIN":{
+			"pic":"openzeppelin.png",
+			"title":"OPENZEPPELIN",
+			"short_name":"OpenZeppelin",
+			"level":"EXPERT"
+		},	
+		"WEB3JS":{
+			"pic":"web3js.png",
+			"title":"WEB3JS",
+			"short_name":"Web3JS",
+			"level":"PROFICIENT"
+		},		
+		"GETH":{
+			"pic":"goethereum.png",
+			"title":"GETH",
+			"short_name":"Geth",
+			"level":"PROFICIENT"
+		},	
+		"GANACHE":{
+			"pic":"ganache.png",
+			"title":"GANACHE",
+			"short_name":"Ganache",
+			"level":"EXPERT"
+		},
+		"METAMASK":{
+			"pic":"metamask.jpg",
+			"title":"METAMASK",
+			"short_name":"Metamask",
+			"level":"EXPERT"
+		},
+		"INFURA":{
+			"pic":"infura.jpg",
+			"title":"INFURA",
+			"short_name":"Infura",
+			"level":"EXPERT"
+		}
+	},
 	"front-end":{
 		"RWD_design":{
 			"pic":"rwd.png",
@@ -207,56 +257,6 @@
 			"title":"ECLIPSE",
 			"short_name":"ECLIPSE",
 			"level":"FAMILIAR"
-		}
-	},
-	"cryptocurrency":{
-		"SOLIDITY":{
-			"pic":"solidity.png",
-			"title":"SOLIDITY",
-			"short_name":"Solidity",
-			"level":"EXPERT"
-		},
-		"TRUFFLE":{
-			"pic":"truffle.jpg",
-			"title":"TRUFFLE",
-			"short_name":"Truffle",
-			"level":"EXPERT"
-		},		
-		"OPENZEPPELIN":{
-			"pic":"openzeppelin.png",
-			"title":"OPENZEPPELIN",
-			"short_name":"OpenZeppelin",
-			"level":"EXPERT"
-		},	
-		"WEB3JS":{
-			"pic":"web3js.png",
-			"title":"WEB3JS",
-			"short_name":"Web3JS",
-			"level":"PROFICIENT"
-		},		
-		"GETH":{
-			"pic":"goethereum.png",
-			"title":"GETH",
-			"short_name":"Geth",
-			"level":"PROFICIENT"
-		},	
-		"GANACHE":{
-			"pic":"ganache.png",
-			"title":"GANACHE",
-			"short_name":"Ganache",
-			"level":"EXPERT"
-		},
-		"METAMASK":{
-			"pic":"metamask.jpg",
-			"title":"METAMASK",
-			"short_name":"Metamask",
-			"level":"EXPERT"
-		},
-		"INFURA":{
-			"pic":"infura.jpg",
-			"title":"INFURA",
-			"short_name":"Infura",
-			"level":"EXPERT"
 		}
 	}
 }
