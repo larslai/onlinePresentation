@@ -25,12 +25,13 @@ function loadJsonFile(){
 	});
 
 	//load experience
+	/*
 	$.getJSON( "json_file/experience_data.json", function( experience_row_data ) {
 		var newest_experience_first = true;
 		experience_data = filterExperience(experience_row_data , newest_experience_first);
 		initExperience(experience_data);
 	});
-
+	*/
 	//load contact
 	$.getJSON( "json_file/contact.json", function( contact_data ) {
 		initContact(contact_data);
