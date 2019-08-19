@@ -52,7 +52,7 @@
 	"front-end":{
 		"RWD_design":{
 			"pic":"rwd.png",
-			"title":"responsive web design",
+			"title":"RWD",
 			"short_name":"RWD",
 			"level":"EXPERT"
 		},
@@ -91,7 +91,19 @@
 			"title":"SASS",
 			"short_name":"SASS",
 			"level":"PROFICIENT"
-		}		
+		},
+		"Vuejs":{
+			"pic":"vuejs.png",
+			"title":"Vuejs",
+			"short_name":"Vuejs",
+			"level":"PROFICIENT"
+		},
+		"Nuxt":{
+			"pic":"nuxt.jpg",
+			"title":"Nuxt",
+			"short_name":"Nuxt",
+			"level":"PROFICIENT"
+		}
 	},
 	"back-end":{
 		"LAMP":{
@@ -201,6 +213,12 @@
 			"title":"Redis",
 			"short_name":"Redis",
 			"level":"FAMILIAR"
+		},
+		"Laravel":{
+			"pic":"Laravel.png",
+			"title":"Laravel",
+			"short_name":"Laravel",
+			"level":"PROFICIENT"
 		}
 	},
 	"tools":{		
