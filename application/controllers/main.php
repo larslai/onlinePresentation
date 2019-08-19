@@ -291,7 +291,7 @@ class Main extends CI_Controller {
 			'front-end'=>array(
 				'RWD_design'=>array(
 					'pic'=>'rwd.png',
-					'title'=>'responsive web design',
+					'title'=>'RWD',
 					'short_name'=>'RWD',
 					'level'=>'EXPERT',
 					),
@@ -331,6 +331,18 @@ class Main extends CI_Controller {
 					'short_name'=>'SASS',
 					'level'=>'PROFICIENT',
 					),
+				'Vuejs'=>array(
+					'pic'=>'vuejs.png',
+					'title'=>'Vuejs',
+					'short_name'=>'VUEJS',
+					'level'=>'PROFICIENT',
+					),
+				'Nuxt'=>array(
+					'pic'=>'nuxt.jpg',
+					'title'=>'Nuxt',
+					'short_name'=>'Nuxt',
+					'level'=>'PROFICIENT',
+					)
 				),
 			'back-end'=>array(
 				'LAMP'=>array(
@@ -441,6 +453,12 @@ class Main extends CI_Controller {
 					'short_name'=>'Go',
 					'level'=>'FAMILIAR',
 					),
+				'Laravel'=>array(
+					'pic'=>'Laravel.png',
+					'title'=>'Laravel',
+					'short_name'=>'Laravel',
+					'level'=>'EXPERT',
+					)
 				),
 			'tools'=>array(				
 				'Git'=>array(
