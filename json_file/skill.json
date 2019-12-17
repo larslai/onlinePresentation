@@ -221,6 +221,14 @@
 			"level":"PROFICIENT"
 		}
 	},
+	"apps": {
+		"Flutter":{
+			"pic":"flutter.png",
+			"title":"Flutter",
+			"short_name":"Flutter",
+			"level":"FAMILIAR"
+		}
+	},
 	"tools":{		
 		"Git":{
 			"pic":"git.png",
